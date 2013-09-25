@@ -1,3 +1,5 @@
+require "slim"
+
 ###
 # Compass
 ###
@@ -45,11 +47,17 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'js'
 
-set :images_dir, 'images'
+set :images_dir, 'img'
+
+after_configuration do
+  sprockets.append_path File.join(File.dirname(__FILE__), "vendor/css")
+  sprockets.append_path File.join(File.dirname(__FILE__), "vendor/js")
+  sprockets.append_path File.join(File.dirname(__FILE__), "vendor/img")
+end
 
 # Build-specific configuration
 configure :build do
@@ -68,3 +76,4 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+

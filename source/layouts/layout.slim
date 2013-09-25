@@ -1,0 +1,48 @@
+doctype html
+/[if lt IE 7]
+  html.no-js.lt-ie9.lt-ie8.lt-ie7 lang="en"
+/[if IE 7]
+  html.no-js.lt-ie9.lt-ie8 lang="en"
+/[if IE 8]
+  html.no-js.lt-ie9 lang="en"
+| <!--[if (gte IE 8)]<!-->
+  <html class="no-js"> <!--<![endif]-->
+head
+  meta charset="utf-8"
+  meta http-equiv="X-UA-Compatible" content="IE=edge"
+  title = current_page.data.title || "Test Kitchen"
+  meta name="description" content="Test Kitchen"
+  meta name="author" content="Fletcher Nichol"
+  meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+  = stylesheet_link_tag "kitchen"
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans"
+
+  = javascript_include_tag "vendor/modernizr-2.6.2.min"
+
+body
+  /[if lt IE 7]
+    p.browsehappy You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+
+  .navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner
+      .container
+        a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand href="index.html" Test Kitchen
+        .nav-collapse.collapse
+          ul.nav
+            li.active
+              = link_to "Home", "/index.html"
+
+  #herowrap
+    = image_tag "kitchen.jpg"
+
+  .container
+    == yield
+
+  = javascript_include_tag "all"
+| </html>
