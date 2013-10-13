@@ -7,6 +7,8 @@ gem "pry"
 
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 
+gem 'middleman-syntax', github: 'middleman/middleman-syntax'
+
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 

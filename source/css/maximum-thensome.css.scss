@@ -1,0 +1,129 @@
+// Sensible defaults
+
+body {
+  background: #f2f2f2;
+  color: #565656;
+  font-family: 'Open Sans', sans-serif;
+}
+
+::-moz-selection 	{
+  background: #ff0;
+  color:#333;
+}
+
+::selection {
+  background: #ff0;
+  color:#333;
+}
+
+// Bootstrap modifications
+
+.navbar {
+  font-size: 14px;
+}
+
+// Typography
+
+$color-emphasis: #e25740;
+
+p,
+ul,
+ol {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0 0 1.5em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1;
+  margin-top: 1.42em;
+  margin-bottom: 1em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.9125em;
+  line-height: 1.1429;
+  margin-top: 1.1429em;
+  margin-bottom: 15px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  color: $color-emphasis;
+}
+
+h3 {
+  font-size: 1.125em;
+  line-height: 1.3333;
+  margin-top: 1.3333em;
+  margin-bottom: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  color: $color-emphasis;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: 0.875em;
+  line-height: 1.7142;
+  margin-top: 1.7143em;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-size: 40px;
+  line-height: 1;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: lighter;
+}
+
+strong {
+  font-size: 16px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+small {
+  font-size: 0.75em;
+  line-height: 2;
+  margin-top: 2em;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+p {
+  font-style: normal;
+  font-family: 'Open Sans';
+}
+
+em {
+  font-style: normal;
+  font-family: 'Open Sans';
+  color: $color-emphasis;
+  margin: auto;
+}
+
+.muted {
+  font-family: 'Open Sans';
+  color: #a5a5a2;
+}
