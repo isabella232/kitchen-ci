@@ -3,12 +3,11 @@
   .welcomewrap
     h1 GETTING STARTED GUIDE
 
+  .progress
+    .progress-bar role="progressbar" aria-valuenow=guide_progress aria-valuemin="0" aria-valuemax="100" style="width: #{guide_progress}%;"
+      span.sr-only #{guide_progress}% Complete
+
   .container.guide
-    .row
-      .col-md-12
-        .progress
-          .progress-bar role="progressbar" aria-valuenow=guide_progress aria-valuemin="0" aria-valuemax="100" style="width: #{guide_progress}%;"
-            span.sr-only #{guide_progress}% Complete
     .row
       article.col-md-8
         == yield
