@@ -26,6 +26,10 @@ require "slim"
 #   page "/admin/*"
 # end
 
+with_layout :guide do
+  page "/getting-started/*"
+end
+
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
@@ -41,13 +45,49 @@ require "slim"
 activate :livereload
 
 activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def current_page?(page)
+    page.sub(%r{^/}, '') == request["path"]
+  end
+
+  def guide_nav(title, page)
+    path = "/getting-started/#{page}.html"
+
+    if current_page?(path)
+      %{<span class="glyphicon glyphicon-bookmark"></span> } + title
+    else
+      link_to(title, path)
+    end
+  end
+
+  def guide_sections
+    [ [ "installing", "Installing Test Kitchen" ],
+      [ "creating-cookbook", "Creating a Cookbook" ],
+      [ "writing-recipe", "Writing a Recipe" ],
+      [ "running-converge", "Running Kitchen Converge" ],
+      [ "manually-verifying", "Manually Verifying" ],
+      [ "writing-test", "Writing a Test" ],
+      [ "running-verify", "Running Kitchen Verify" ],
+      [ "running-test", "Running Kitchen Test" ],
+      [ "adding-platform", "Adding a Platform"  ],
+      [ "fixing-converge", "Fixing Converge" ],
+      [ "adding-dependency", "Adding a Dependency" ],
+    ]
+  end
+
+  def guide_index
+    page = File.basename(request["path"]).sub(%r{\.html$}, '')
+    guide_sections.index { |s| s.first == page }
+  end
+
+  def guide_progress
+    ((guide_index + 1.0) / guide_sections.size) * 100
+  end
+end
 
 set :css_dir, 'css'
 

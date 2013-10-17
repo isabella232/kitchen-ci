@@ -5,9 +5,11 @@ gem "middleman", "~> 3.1.5"
 gem "slim"
 gem "pry"
 
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+gem "bootstrap-sass", github: "thomas-mcdonald/bootstrap-sass"
 
-gem 'middleman-syntax', github: 'middleman/middleman-syntax'
+gem "middleman-syntax", github: "middleman/middleman-syntax"
+
+gem "redcarpet"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

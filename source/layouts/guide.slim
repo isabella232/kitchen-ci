@@ -1,0 +1,19 @@
+- wrap_layout :layout do
+
+  .welcomewrap
+    h1 GETTING STARTED GUIDE
+
+  .container.guide
+    .row
+      .col-md-12
+        .progress
+          .progress-bar role="progressbar" aria-valuenow=guide_progress aria-valuemin="0" aria-valuemax="100" style="width: #{guide_progress}%;"
+            span.sr-only #{guide_progress}% Complete
+    .row
+      article.col-md-8
+        == yield
+      .col-md-4
+        h2 Sections
+        ul.sections
+          - guide_sections.each do |section|
+            li = guide_nav section.last, section.first
