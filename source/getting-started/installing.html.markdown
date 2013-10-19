@@ -12,7 +12,7 @@ To follow this guide there is some software that we will need in order for Test 
 I know, it sounds like a lot of work but don't depair. We're going to follow the [Workstation Setup](https://learnchef.opscode.com/quickstart/workstation-setup/) instructions from the [#learnchef](https://learnchef.opscode.com/) website. Take a few minutes to get your software setup and if you run into any issues there should be some smart and capable people in the [#learnchef](http://webchat.freenode.net/?channel=learnchef) IRC chatroom to get you back on track.
 
 
-**All done? Great! Open a terminal window and let's get started.**
+> **All done? Great! Open a terminal window and let's get started.**
 
 Installing Test Kitchen from RubyGems goes like this:
 
