@@ -22,6 +22,10 @@ body {
   font-size: 14px;
 }
 
+.well p:last-child {
+  margin-bottom: 0;
+}
+
 // Typography
 
 $color-emphasis: #e25740;

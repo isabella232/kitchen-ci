@@ -65,7 +65,9 @@ helpers do
   end
 
   def guide_sections
-    [ [ "installing", "Installing Test Kitchen" ],
+    [ [ "introduction", "Introduction" ],
+      [ "installing", "Installing Test Kitchen" ],
+      [ "getting-help", "Getting Help" ],
       [ "creating-cookbook", "Creating a Cookbook" ],
       [ "writing-recipe", "Writing a Recipe" ],
       [ "running-converge", "Running Kitchen Converge" ],
