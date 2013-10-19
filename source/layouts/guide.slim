@@ -12,7 +12,6 @@
       article.col-md-8
         == yield
       .col-md-4
-        h2 Contents
         ul.sections
           - guide_sections.each do |section|
             li = guide_nav section.last, section.first
