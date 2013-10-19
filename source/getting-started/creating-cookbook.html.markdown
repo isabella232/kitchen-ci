@@ -160,4 +160,15 @@ Instance             Driver   Provisioner  Last Action
 default-ubuntu-1204  Vagrant  Chef Solo    Created
 ```
 
+Let's commit our glorious work:
+
+```
+$ git add .gitignore .kitchen.yml
+$ git commit -m "Add Test Kitchen to the project."
+[master d119471] Add Test Kitchen to the project.
+ 2 files changed, 14 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .kitchen.yml
+```
+
 Ok, we have a instance created and ready for some Chef code. Onward!
