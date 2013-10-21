@@ -79,6 +79,7 @@ helpers do
       [ "fixing-converge", "Fixing Converge" ],
       [ "adding-feature", "Adding a New Feature" ],
       [ "adding-suite", "Adding a Suite" ],
+      [ "writing-server-test", "Writing a Server Test" ],
       [ "adding-dependency", "Adding a Dependency" ],
     ]
   end
