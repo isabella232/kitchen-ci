@@ -10,7 +10,7 @@ To keep things simple we're going to use the `busser-bats` runner plugin which u
 
 <div class="well">
   <h4><span class="glyphicon glyphicon-pushpin"></span> Pro-Tip</h4>
-  <p></p>
+  <p>Something about shell code and platform portability</p>
 </div>
 
 We need to put our test files in a specifc location, so let's create the directory:
