@@ -77,6 +77,8 @@ helpers do
       [ "running-test", "Running Kitchen Test" ],
       [ "adding-platform", "Adding a Platform"  ],
       [ "fixing-converge", "Fixing Converge" ],
+      [ "adding-feature", "Adding a New Feature" ],
+      [ "adding-suite", "Adding a Suite" ],
       [ "adding-dependency", "Adding a Dependency" ],
     ]
   end
