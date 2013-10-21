@@ -107,7 +107,7 @@ Chef Client finished, 1 resources updated
 -----> Kitchen is finished. (0m2.40s)
 ```
 
-That ran a **lot** faster didn't it? Here's what heppened this time:
+That ran a **lot** faster didn't it? Here's what happened this time:
 
 * Test Kitchen found that Chef was present and installed so skipped a re-installation.
 * The same Chef cookbook files and Chef Solo configuration was uploaded to the instance. Test Kitchen is optimizing for **freshness of code and configuration over speed**. Although we all like speed wherever possible.
