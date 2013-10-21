@@ -168,3 +168,12 @@ Instance             Driver   Provisioner  Last Action
 default-ubuntu-1204  Vagrant  Chef Solo    <Not Created>
 default-centos-64    Vagrant  Chef Solo    <Not Created>
 ```
+
+There's no production code change so far but we did modify the `.kitchen.yml` file, so let's commit that:
+
+```
+$ git add .kitchen.yml
+> git commit -m "Add support for CentOS 6.4."
+[master 528ac72] Add support for CentOS 6.4.
+ 1 file changed, 1 insertion(+)
+```
