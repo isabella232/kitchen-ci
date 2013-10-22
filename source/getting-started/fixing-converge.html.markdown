@@ -1,4 +1,6 @@
-## Fixing Converge
+---
+title: Fixing Converge
+---
 
 News of the amazing Git cookbook starts to spread to all corners of your workplace. Now a colleague has expressed interest in running the cookbook on a fleet of older Ubuntu 10.04 systems. No problem, they should be good to go, right? Just to be sure let's add explicit testing for this platform.
 

@@ -1,3 +1,5 @@
-## Writing a Server Test
+---
+title: Writing a Server Test
+---
 
 Bingo.

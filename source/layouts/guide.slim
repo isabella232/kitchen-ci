@@ -1,7 +1,7 @@
 - wrap_layout :layout do
 
   .welcomewrap
-    h1 GETTING STARTED GUIDE
+    h1 Getting Started Guide
 
   .progress
     .progress-bar role="progressbar" aria-valuenow=guide_progress aria-valuemin="0" aria-valuemax="100" style="width: #{guide_progress}%;"
@@ -10,6 +10,7 @@
   .container.guide
     .row
       article.col-md-8
+        h2 = current_page.data.title
         == yield
       .col-md-4
         ul.sections

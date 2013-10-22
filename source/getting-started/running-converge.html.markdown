@@ -1,4 +1,6 @@
-## Running Kitchen Converge
+---
+title: Running Kitchen Converge
+---
 
 Now that we have some code, let's let Test Kitchen run it for us on our Ubuntu 12.04 instance:
 

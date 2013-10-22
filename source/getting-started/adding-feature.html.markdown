@@ -1,4 +1,6 @@
-## Adding a New Feature
+---
+title: Adding a New Feature
+---
 
 Now we're going to add limited support to our Git cookbook for a read-only Git daemon. This lets us see two new concepts in action: working with multiple suites and managing cookbook dependencies.
 

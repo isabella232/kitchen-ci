@@ -1,4 +1,6 @@
-## Writing a Test
+---
+title: Writing a Test
+---
 
 Being able to manually verify the Chef run is great but it would be even better if we had an executable test that would fail if our assumptions were ever proven to be false. Remember how we manually verified that Git was installed in the previous section? Seems like a pretty decent first test to me!
 

@@ -1,4 +1,6 @@
-## Getting Help
+---
+title: Getting Help
+---
 
 If you need a quick reminder of what the `kitchen` command gives you, then use the **help** subcommand:
 

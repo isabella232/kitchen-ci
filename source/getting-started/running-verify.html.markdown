@@ -1,4 +1,6 @@
-## Running Kitchen Verify
+---
+title: Running Kitchen Verify
+---
 
 Now to put our test to the test. For this we'll use the **verify** subcommand:
 

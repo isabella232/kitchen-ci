@@ -1,4 +1,6 @@
-## Manually Verifying
+---
+title: Manually Verifying
+---
 
 If you're a skeptical person then you might be asking:
 

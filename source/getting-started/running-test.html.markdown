@@ -1,4 +1,6 @@
-## Running Kitchen Test
+---
+title: Running Kitchen Test
+---
 
 Now it's time to introduce to the **test** meta-action which helps you automate all the previous actions so far into one command. Recall that we currently have our instance in a "verified" state. With this in mind, let's run `kitchen test`:
 
