@@ -35,13 +35,16 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        = link_to "Test Kitchen", "/index.html", class: "navbar-brand"
+        = link_to data.site.nav.header.name, data.site.nav.header.url, class: "navbar-brand"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li{ class: (current_page?("/index.html") ? "active" : "") }
-            = link_to "Home", "/index.html"
-          %li{ class: (request["path"] =~ /getting-started/ ? "active" : "") }
-            = link_to "Guide", "/getting-started/introduction.html"
+          / %li{ class: (current_page?("/index.html") ? "active" : "") }
+          /   = link_to "Home", "/index.html"
+          / %li{ class: (request["path"] =~ /getting-started/ ? "active" : "") }
+          /   = link_to "Guide", "/getting-started/introduction.html"
+          - data.site.nav.sections.each do |nav|
+            %li{ class: (current_page.url == nav.url ? "active" : "" ) }
+              = link_to nav.name, nav.url
 
     = yield
 
