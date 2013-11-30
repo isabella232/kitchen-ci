@@ -1,0 +1,12 @@
+---
+metadata:
+  subtitle: "Documentation"
+
+sidebar:
+  button:
+    text: "Fork the docs"
+    url: "http://github.com/heavywater/kitchen-docs/fork"
+    subtext: "(Fork the <a href='http://github.com/heavywater/kitchen-docs'>kitchen-docs</a> project on GitHub)"
+
+promotion:
+  sponsorship: ""
