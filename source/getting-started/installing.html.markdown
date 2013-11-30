@@ -1,5 +1,8 @@
 ---
-title: Installing Test Kitchen
+title: "Installing Test Kitchen"
+next:
+  text: "Getting Help"
+  url: "getting-help"
 ---
 
 Okay let's get down to it, shall we? Test Kitchen is packaged and delivered to you as a [RubyGem](http://guides.rubygems.org/what-is-a-gem/). If you've used Chef, Puppet, or Rails before then working with Gems shouldn't present a huge challenge. If all this Ruby "stuff" is new, then don't dispair--we're going to steer clear of a lot of Ruby-looking code.

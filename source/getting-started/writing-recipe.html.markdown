@@ -1,5 +1,8 @@
 ---
-title: Writing a Recipe
+title: "Writing a Recipe"
+next:
+  text: "Running Kitchen Converge"
+  url: "running-converge"
 ---
 
 Here we go, time to automate our Git installation! Open `recipes/default.rb` in your editor of choice and write the following:

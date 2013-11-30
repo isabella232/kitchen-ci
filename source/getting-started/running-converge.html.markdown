@@ -1,10 +1,13 @@
 ---
-title: Running Kitchen Converge
+title: "Running Kitchen Converge"
+next:
+  text: "Manually verifying"
+  url: "manually-verifying"
 ---
 
 Now that we have some code, let's let Test Kitchen run it for us on our Ubuntu 12.04 instance:
 
-```
+``` 
 $ kitchen converge default-ubuntu-1204
 -----> Starting Kitchen (v1.0.0.beta.3)
 -----> Converging <default-ubuntu-1204>

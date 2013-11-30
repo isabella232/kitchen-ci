@@ -1,5 +1,8 @@
 ---
-title: Getting Help
+title: "Getting Help"
+next:
+  text: "Creating a Cookbook"
+  url: "creating-cookbook"
 ---
 
 If you need a quick reminder of what the `kitchen` command gives you, then use the **help** subcommand:

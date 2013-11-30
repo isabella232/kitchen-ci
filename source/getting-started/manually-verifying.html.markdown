@@ -1,5 +1,8 @@
 ---
-title: Manually Verifying
+title: "Manually Verifying"
+next:
+  text: ""
+   url: ""
 ---
 
 If you're a skeptical person then you might be asking:
