@@ -1,5 +1,5 @@
 ---
-tite: "Introduction"
+title: "Introduction"
 next:
   text: "Installing Test Kitchen"
   url: "installing"
@@ -8,3 +8,4 @@ warning: "<strong>WARNING:</strong> This is a warning, which is a slightly stron
 danger: "<strong>DANGER:</strong> There be dragons and other dangerous stuff here. Proceed with caution!"
 ---
 
+Demo alert page
