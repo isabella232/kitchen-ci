@@ -2,7 +2,7 @@
 title: "Manually Verifying"
 next:
   text: ""
-   url: ""
+  url: ""
 ---
 
 If you're a skeptical person then you might be asking:
