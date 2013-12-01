@@ -7,16 +7,25 @@
   h2 {
     display: inline;
   };
-  span {
+  a {
     display: inline;
     /*float: right;*/
     height: 100%;
     margin-top: auto;
     margin-bottom: auto;
+    transition:all .5s ease-in; 
+      -o-transition:all .5s ease-in; 
+      -moz-transition:all .5s ease-in; 
+      -webkit-transition:all .5s ease-in;
   };
-  span:hover {
+  a:hover {
     text-decoration: none;
-    font-size: 125%;
+    font-size: 150%;
+    color: #42484d;
+    transition:all .5s ease-in; 
+      -o-transition:all .5s ease-in; 
+      -moz-transition:all .5s ease-in; 
+      -webkit-transition:all .5s ease-in;
   }
 }
 

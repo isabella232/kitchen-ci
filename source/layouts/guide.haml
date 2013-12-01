@@ -28,7 +28,7 @@
         %span#githubs
           %h2= current_page.data.title
           %a{ href: @forkthedocs }
-            %span.glyphicon.glyphicon-pencil
+            .glyphicon.glyphicon-pencil
 
         :preserve
           #{yield}
@@ -37,14 +37,15 @@
 
         %div#suggestions
           %div.row
-            %div.col-md-8.pull-left
+            %div.col-md-7.pull-left
               %p= data.docs.promotion.sponsorship 
 
-            %div.col-md-4.pull-right
+            %div.col-md-5.pull-right
               - if current_resource.data.next
-                %a.btn.btn-default{ href: current_resource.data.next.url }
-                  %span.glyphicon.glyphicon-circle-arrow-right
-                  = current_resource.data.next.text
+                .maximum-button.red.full-width
+                  %a{ href: current_resource.data.next.url }= current_resource.data.next.text
+                  %i.glyphicon.glyphicon-circle-arrow-right
+
 
       .col-md-4
         %ul.sections
