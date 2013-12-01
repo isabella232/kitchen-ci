@@ -43,5 +43,12 @@
 table {
   @extend .well;
   @extend .table;
-  @extend .protip
+  @extend .protip;
+  tr:nth-child(1) {
+    background-color: #e4e4e4;
+    td:nth-child(1):after {
+      visibility: visible;
+      content: "{icon}";
+    };
+  };
 }

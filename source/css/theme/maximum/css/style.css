@@ -730,7 +730,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 	border: none;
 	border-bottom: 3px solid #1A7763;
 	padding: 10px 30px 7px 46px;
-	background: url("theme/maximum/img/link.png") no-repeat scroll 19px 11px #26ae90;
+	background: url("/css/theme/maximum/img/link.png") no-repeat scroll 19px 11px #26ae90;
 	transition:all .5s ease-in; 
     -o-transition:all .5s ease-in; 
     -moz-transition:all .5s ease-in; 
@@ -749,7 +749,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 	border: none;
 	border-bottom: 3px solid #dd4a38;
 	padding: 10px 30px 7px 46px;
-	background: url("theme/maximum/img/link.png") no-repeat scroll 19px 11px #FF675B;
+	background: url("/css/theme/maximum/img/link.png") no-repeat scroll 19px 11px #FF675B;
 	transition:all .5s ease-in; 
     -o-transition:all .5s ease-in; 
     -moz-transition:all .5s ease-in; 
@@ -768,7 +768,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 	border: none;
 	border-bottom: 3px solid #3083a7;
 	padding: 10px 30px 7px 46px;
-	background: url("theme/maximum/img/link.png") no-repeat scroll 19px 11px #4baad3;
+	background: url("/css/theme/maximum/img/link.png") no-repeat scroll 19px 11px #4baad3;
 	transition:all .5s ease-in; 
     -o-transition:all .5s ease-in; 
     -moz-transition:all .5s ease-in; 
@@ -787,7 +787,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 	border: none;
 	border-bottom: 3px solid #42484d;
 	padding: 10px 30px 7px 46px;
-	background: url("theme/maximum/img/link.png") no-repeat scroll 24px 11px #42484d;
+	background: url("/css/theme/maximum/img/link.png") no-repeat scroll 24px 11px #42484d;
 	text-transform:uppercase;
 	}
 
@@ -821,7 +821,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 	float: left; 
 	background: #3bc492; 
 	margin-bottom:20px;
-	background-image:url("theme/maximum/img/read_more.png");
+	background-image:url("/css/theme/maximum/img/read_more.png");
 	background-repeat:no-repeat;
 	background-position:center center;
 	}
@@ -848,7 +848,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 	float: left; 
 	background: #dd4a38; 
 	margin-bottom:20px;
-	background-image:url("theme/maximum/img/read_more.png");
+	background-image:url("/css/theme/maximum/img/read_more.png");
 	background-repeat:no-repeat;
 	background-position:center center;
 	}
@@ -930,7 +930,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 }
 
 .item-triangle {
-	background: url(theme/maximum/img/mask-triangle.png) no-repeat 0 0 transparent;
+	background: url(/css/theme/maximum/img/mask-triangle.png) no-repeat 0 0 transparent;
 	width: 316px;
 	height: 272px;
 	position: absolute;
@@ -952,7 +952,7 @@ h1.title2-bg, h2.title2-bg, h3.title2-bg, h4.title2-bg , h5.title2-bg, h6.title2
 }
 
 .item-hexagon {
-	background: url(theme/maximum/img/mask-hexagon.png) no-repeat 0 0 transparent;
+	background: url(/css/theme/maximum/img/mask-hexagon.png) no-repeat 0 0 transparent;
 	width: 316px;
 	height: 272px;
 	position: absolute;
@@ -1042,7 +1042,7 @@ ul.post-data li:last-child {padding-right: 0px;}
 .blog-post-hover { 
 	display:none; 
 	width:270px; height:220px;
-	background:url(theme/maximum/assets/img/post-item-hover.png);
+	background:url(/css/theme/maximum/assets/img/post-item-hover.png);
 	position:absolute; 
 	z-index: 10;
 }
@@ -1177,7 +1177,7 @@ p.side {margin-bottom: 20px;}
 18 - Skills Donut Charts --------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 #stat1 {
-	background-image: url(theme/maximum/img/stat1.png);
+	background-image: url(/css/theme/maximum/img/stat1.png);
 	width: 14.313em;
 	height: 14.313em;
 	margin-bottom: 1.063em;
@@ -1187,7 +1187,7 @@ p.side {margin-bottom: 20px;}
 }
 
 #stat2 {
-	background-image: url(theme/maximum/img/stat2.png);
+	background-image: url(/css/theme/maximum/img/stat2.png);
 	width: 14.313em;
 	height: 14.313em;
 	margin-bottom: 1.063em;
@@ -1198,7 +1198,7 @@ p.side {margin-bottom: 20px;}
 }
 
 #stat3 {
-	background-image: url(theme/maximum/img/stat3.png);
+	background-image: url(/css/theme/maximum/img/stat3.png);
 	width: 14.313em;
 	height: 14.313em;
 	margin-bottom: 1.063em;
@@ -1380,7 +1380,7 @@ ul.img-feed li {
 }
 
 #landingwrap-03 {
-	background: url(theme/maximum/img/landing/header.png) no-repeat center top; 
+	background: url(/css/theme/maximum/img/landing/header.png) no-repeat center top; 
 	margin-top: -60px;
 	padding-top:160px;
 	text-align:center;
@@ -1436,7 +1436,7 @@ ul.img-feed li {
 }
 
 #soonwrap-02 {
-	background: url(theme/maximum/img/bg.jpg) no-repeat center top; 
+	background: url(/css/theme/maximum/img/bg.jpg) no-repeat center top; 
 	margin-top: 0px;
 	text-align:center;
 	height:300px;
@@ -1446,7 +1446,7 @@ ul.img-feed li {
 }
 
 #soonwrap-03 {
-	background: url(theme/maximum/img/bg2.jpg) no-repeat center top; 
+	background: url(/css/theme/maximum/img/bg2.jpg) no-repeat center top; 
 	margin-top: -60px;
 	text-align:center;
 	height:100%;
@@ -1488,7 +1488,7 @@ ul.img-feed li {
 24 - Event Page Conf ------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 #eventwrap {
-	background: url(theme/maximum/img/event/header.jpg) no-repeat center top; 
+	background: url(/css/theme/maximum/img/event/header.jpg) no-repeat center top; 
 	margin-top: -60px;
 	padding-top:160px;
 	text-align:center;
