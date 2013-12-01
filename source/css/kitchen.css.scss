@@ -7,10 +7,11 @@ $link-color: #f1505a;
 
 /* CSS Sources */
 @import "bootstrap";
-@import "maximum-thensome";
+@import "theme/maximum-thensome";
+@import "theme/maximum-style";
 @import "pages/home";
 @import "pages/getting-started";
-@import "code";
+@import "code-highlighting";
 
 /* CSS */
 body {

@@ -1,0 +1,56 @@
+.full-width {
+  width: 100%;
+}
+
+/* Easier buttons, derived from Maximum style.css */
+.maximum-button {
+  display: block;
+  position: relative;
+  margin: 25px 0 25px 0;
+  float: left;
+  border: none;
+  padding: 10 10 7 10;
+  min-height: 50px;
+}
+
+.maximum-button i {
+  display: inline-block;
+  color: #ffffff;
+  float: right;
+  font-size: 24px;
+}
+
+.maximum-button a {
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 500;  
+  text-decoration: none;
+  text-transform:uppercase;
+}
+
+.maximum-button:hover {
+  border-bottom: 3px solid #42484d;
+  background-color:#42484d;
+  text-transform:uppercase;
+  transition:all .5s ease-in; 
+    -o-transition:all .5s ease-in; 
+    -moz-transition:all .5s ease-in; 
+    -webkit-transition:all .5s ease-in;
+}
+
+.green {
+  background-color: #3bc492;
+  border-bottom: 3px solid #1A7763;
+}
+
+.red {
+  background-color: #FF675B;
+  border-bottom: 3px solid #dd4a38;
+}
+
+.blue {
+  background-color: #4baad3;
+  border-bottom: 3px solid #3083a7;
+}
