@@ -46,8 +46,8 @@ activate :directory_indexes
 activate :livereload
 
 activate :syntax
-set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true
+set :markdown_engine, :kramdown # explicitly stated even though this is the default
+# set :markdown, fenced_code_blocks: true, smartypants: true, highlight: true, tables: true # not sure if these options are needed w/ kramdown
 
 # Methods defined in the helpers block are available in templates
 helpers do

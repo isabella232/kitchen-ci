@@ -35,3 +35,13 @@
     width: 100%;
   }
 }
+
+.protip {
+  display: block;
+}
+
+table {
+  @extend .well;
+  @extend .table;
+  @extend .protip
+}

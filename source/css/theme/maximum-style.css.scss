@@ -2,7 +2,19 @@
   width: 100%;
 }
 
-/* Easier buttons, derived from Maximum style.css */
+.green {
+  background-color: #3bc492;
+}
+
+.red {
+  background-color: #FF675B;
+}
+
+.blue {
+  background-color: #4baad3;
+}
+
+/* Easier buttons, derived from Maximum > style.css */
 .maximum-button {
   display: block;
   position: relative;
@@ -40,28 +52,64 @@
     -webkit-transition:all .5s ease-in;
 }
 
-.green {
-  background-color: #3bc492;
-}
-
 .green-border {
   border-bottom: 3px solid #1A7763;
-}
-
-.red {
-  background-color: #FF675B;
 }
 
 .red-border {
   border-bottom: 3px solid #dd4a38;
 }
 
-.blue {
-  background-color: #4baad3;
-}
-
 .blue-border {
   border-bottom: 3px solid #3083a7;
 }
 
+/* Easier alerts, derived from Maximum > style.css */
+blockquote {
+  @extend .maximum-alert
+}
+
+.maximum-alert:before {
+  border-color: #47bd9d transparent transparent transparent;
+    border-style: solid;
+    border-width: 14px 13px 0px;
+    content: "";
+    height: 0;
+    left: 14px;
+    position: absolute;
+    bottom: -13px;
+    width: 0;
+  }
+
+.maximum-alert {
+  padding: 25px;
+  clear: both;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  background-color: #47bd9d;
+    font-weight: 400;
+  position: relative;
+  }
+  
+.maximum-alert p {
+  color:#ffffff;
+  font-size:16px;
+  font-weight: 400;
+  }
+  
+.maximum-alert a {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 400;
+  }
+  
+.maximum-alert a:hover {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 400;
+  }
 
