@@ -17,6 +17,8 @@ Initialized empty Git repository in /tmpt-cookbook/git-cookbook/.git/
 $ cd git-cookbook
 ```
 
+Note that the directory doesn't matter to Test Kitchen so feel free to call this directory `git`, `chef-git`, `chef-git-cookbook`, or `fuzzypants_git`.
+
 Next we need a [metadata.rb](http://docs.opscode.com/config_rb_metadata.html) file so that various Chef-aware tooling can understand our cookbook. Test Kitchen is no different and there are minimally only 2 things that Test Kitchen cares about: cookbook **name** and cookbook **version** attributes. Use your favorite text editor and create a file called `metadata.rb` with the following:
 
 
@@ -55,7 +57,8 @@ $ kitchen init --driver=kitchen-vagrant
       append  .gitignore
       append  .gitignore
          run  gem install kitchen-vagrant from "."
-Successfully installed kitchen-vagrant-0.11.1
+Fetching: kitchen-vagrant-0.12.0.gem (100%)
+Successfully installed kitchen-vagrant-0.12.0
 1 gem installed
 ```
 
@@ -76,26 +79,27 @@ Let's turn our attention to the `.kitchen.yml` file for a minute. While Test Kit
 
 ```yaml
 ---
-driver_plugin: vagrant
-driver_config:
-  require_chef_omnibus: true
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
 
 platforms:
-- name: ubuntu-12.04
-- name: ubuntu-10.04
-- name: centos-6.4
-- name: centos-5.9
+  - name: ubuntu-12.04
+  - name: centos-6.4
 
 suites:
-- name: default
-  run_list: ["recipe[git]"]
-  attributes: {}
+  - name: default
+    run_list:
+      - recipe[git::default]
+    attributes:
 ```
 
 Very briefly we can cover the 4 main sections you're likely to find in a `.kitchen.yml` file:
 
-* `driver_plugin`: This tells Test Kitchen that we want to use the `kitchen-vagrant` driver by default.
-* `driver_config`: This is the default configuration passed to each Driver instance. The `require_chef_omnibus: true` tells the Driver that the latest version of the Chef omnibus package needs to be installed
+* `driver`: This is the default configuration passed to each Driver instance you can set things like credentials, ssh usernames, sudo requirements, etc. Each Driver is reponsible for requiring and using the configuration here.
+* `driver.name`: This tells Test Kitchen that we want to use the `kitchen-vagrant` driver by default unless otherwise specified.
 * `platforms`: This is a list of operation systems on which we want to run our code. Note that the operation system's version, architecture, cloud environment, etc. might be relavent to what Test Kitchen considers a **Platform**.
 * `suites`: This is a list of Chef run-list and node attribute setups that we want run on each **Platform** above. For example, we might want to test the MySQL client cookbook code seperately from the server cookbook code for maximum isolation.
 
@@ -103,17 +107,20 @@ Let's say for argument's sake that we only care about running our Chef cookbook 
 
 ```yaml
 ---
-driver_plugin: vagrant
-driver_config:
-  require_chef_omnibus: true
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
 
 platforms:
-- name: ubuntu-12.04
+  - name: ubuntu-12.04
 
 suites:
-- name: default
-  run_list: ["recipe[git]"]
-  attributes: {}
+  - name: default
+    run_list:
+      - recipe[git::default]
+    attributes:
 ```
 
 To see the results of our work, let's run the `kitchen list` subcommand:
@@ -121,7 +128,7 @@ To see the results of our work, let's run the `kitchen list` subcommand:
 ```
 $ kitchen list
 Instance             Driver   Provisioner  Last Action
-default-ubuntu-1204  Vagrant  Chef Solo    <Not Created>
+default-ubuntu-1204  Vagrant  ChefSolo     <Not Created>
 ```
 
 So what's this `default-ubuntu-1204` thing and what's an "Instance"? A Test Kitchen **Instance** is a pairwise combination of a **Suite** and a **Platform** as laid out in your `.kitchen.yml` file. Test Kitchen has auto-named your only instance by combining the **Suite** name (`"default"`) and the **Platform** name (`"ubuntu-12.04"`) into a form that is safe for DNS and hostname records, namely `"default-ubuntu-1204"`.
@@ -130,9 +137,8 @@ Okay, let's spin this **Instance** up to see what happens. Test Kitchen calls th
 
 ```
 $ kitchen create default-ubuntu-1204
------> Starting Kitchen (v1.0.0.beta.3)
------> Creating <default-ubuntu-1204>
-       [kitchen::driver::vagrant command] BEGIN (vagrant up --no-provision)
+-----> Starting Kitchen (v1.0.0)
+-----> Creating <default-ubuntu-1204>...
        Bringing machine 'default' up with 'virtualbox' provider...
        [default] Importing base box 'opscode-ubuntu-12.04'...
        [default] Matching MAC address for NAT networking...
@@ -145,16 +151,12 @@ $ kitchen create default-ubuntu-1204
        [default] -- 22 => 2222 (adapter 1)
        [default] Running 'pre-boot' VM customizations...
        [default] Booting VM...
-       [default] Waiting for machine to boot. This may take a few minutes...
-       [default] Machine booted and ready!
+[default] Waiting for machine to boot. This may take a few minutes...       [default] Machine booted and ready!
        [default] Setting hostname...
        [default] Mounting shared folders...
-       [kitchen::driver::vagrant command] END (0m29.18s)
-       [kitchen::driver::vagrant command] BEGIN (vagrant ssh-config)
-       [kitchen::driver::vagrant command] END (0m0.84s)
        Vagrant instance <default-ubuntu-1204> created.
-       Finished creating <default-ubuntu-1204> (0m33.02s).
------> Kitchen is finished. (0m33.31s)
+       Finished creating <default-ubuntu-1204> (0m53.30s).
+-----> Kitchen is finished. (0m53.59s)
 ```
 
 If you are a Vagrant user then the line containing `vagrant up --no-provision` will look familiar. Let's check the status of our instance now:
@@ -162,7 +164,7 @@ If you are a Vagrant user then the line containing `vagrant up --no-provision` w
 ```
 $ kitchen list
 Instance             Driver   Provisioner  Last Action
-default-ubuntu-1204  Vagrant  Chef Solo    Created
+default-ubuntu-1204  Vagrant  ChefSolo     Created
 ```
 
 Let's commit our glorious work:
@@ -170,8 +172,8 @@ Let's commit our glorious work:
 ```
 $ git add .gitignore .kitchen.yml
 $ git commit -m "Add Test Kitchen to the project."
-[master d119471] Add Test Kitchen to the project.
- 2 files changed, 14 insertions(+)
+[master 431068c] Add Test Kitchen to the project.
+ 2 files changed, 17 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 .kitchen.yml
 ```
