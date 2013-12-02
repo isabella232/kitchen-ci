@@ -1,0 +1,17 @@
+---
+metadata:
+  title: "Test Kitchen"
+
+nav:
+  header: 
+    name: "Test Kitchen"
+    url: "/"
+  sections:
+    - 
+      name: "Home"
+      url: "/"
+
+    - 
+      name: "Guide"
+      url: "/getting-started/"
+---
