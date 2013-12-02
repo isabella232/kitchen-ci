@@ -1,5 +1,11 @@
 ---
 title: Writing a Test
+prev:
+  text: "Manually Verifying"
+  url: "manually-verifying"
+next:
+  text: "Running Kitchen Verify"
+  url: "running-verify"
 ---
 
 Being able to manually verify the Chef run is great but it would be even better if we had an executable test that would fail if our assumptions were ever proven to be false. Remember how we manually verified that Git was installed in the previous section? Seems like a pretty decent first test to me!
@@ -10,16 +16,14 @@ Now if you **are** interested in writing some tests, Test Kitchen has several op
 
 To keep things simple we're going to use the `busser-bats` runner plugin which uses the [Bash Automated Testing System](https://github.com/sstephenson/bats) also known as **bats**.
 
-<div class="well">
-  <h4><span class="glyphicon glyphicon-pushpin"></span> Pro-Tip</h4>
-  <p>Something about shell code and platform portability</p>
-</div>
+|| Pro-Tip
+|| Testing using shell scripts is a great first start, but once you get to testing multiple platforms, you soon find that you're needing to invest some time in handling the differences between distributions and behaviours.  That might indicate to you that you should consider a testing tool that handles that hard work for you.  We'll see more about this shortly.
 
 We need to put our test files in a specifc location, so let's create the directory:
 
-```
+~~~
 $ mkdir -p test/integration/default/bats
-```
+~~~
 
 It looks long and dense, but each directory has some meaning to Test Kitchen and the Busser helper:
 
@@ -29,13 +33,13 @@ It looks long and dense, but each directory has some meaning to Test Kitchen and
 
 Okay, long directories are long. Let's write a test. Create a new file called `test/integration/default/bats/git_installed.bats` with the following:
 
-```sh
+~~~sh
 #!/usr/bin/env bats
 
 @test "git binary is found in PATH" {
   run which git
   [ "$status" -eq 0 ]
 }
-```
+~~~
 
 Can you guess what this does even if you haven't seen a bats test before? If not, then take a look at bats' [README](https://github.com/sstephenson/bats). Otherwise your new friends in the [#chef](http://webchat.freenode.net/?channel=chef) IRC chatroom should be able to help.

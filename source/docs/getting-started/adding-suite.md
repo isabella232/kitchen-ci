@@ -1,10 +1,16 @@
 ---
 title: Adding a Suite
+prev:
+  text: "Adding a New Feature"
+  url: "adding-feature"
+next:
+  text: "Writing a Server Test"
+  url: "writing-server-test"
 ---
 
 We're going to call our new Test Kitchen Suite `"server"` by opening `.kitchen.yml` in your editor of choice so that it looks similar to:
 
-```yaml
+~~~yaml
 ---
 driver:
   name: vagrant
@@ -26,11 +32,11 @@ suites:
     run_list:
       - recipe[git::server]
     attributes:
-```
+~~~
 
 Now run `kitchen list` to see our new suite in action:
 
-```
+~~~
 $ kitchen list
 Instance             Driver   Provisioner  Last Action
 default-ubuntu-1204  Vagrant  ChefSolo     <Not Created>
@@ -39,6 +45,6 @@ default-centos-64    Vagrant  ChefSolo     <Not Created>
 server-ubuntu-1204   Vagrant  ChefSolo     <Not Created>
 server-ubuntu-1004   Vagrant  ChefSolo     <Not Created>
 server-centos-64     Vagrant  ChefSolo     <Not Created>
-```
+~~~
 
 Woah, we've doubled our number of instances! Yes, that is going to happen. This explosion of test cases is just one reason why testing is hard.

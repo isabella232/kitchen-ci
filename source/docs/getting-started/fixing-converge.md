@@ -1,12 +1,18 @@
 ---
 title: Fixing Converge
+prev:
+  text: "Adding a Platform"
+  url: "adding-platform"
+next:
+  text: "Add a New Feature"
+  url: "adding-feature"
 ---
 
-News of the amazing Git cookbook starts to spread to all corners of your workplace. Now a colleague has expressed interest in running the cookbook on a fleet of older Ubuntu 10.04 systems. No problem, they should be good to go, right? Just to be sure let's add explicit testing for this platform.
+News of the amazing Git cookbook starts to spread to all corners of your workplace. Now a colleague has expressed interest in running the cookbook on a fleet of older Ubuntu 10.04 systems.  You mention that 2009 called, and it wants its iPhone 3 and Three Wolf Moon t-shirt back, but they just look at you blankly.  You muse over whether your not inconsiderable talents are wasted in this job, and then press on.  No problem, they should be good to go, right? Just to be sure let's add explicit testing for this platform.
 
 Open `.kitchen.yml` in your editor and add a `ubuntu-10.04` entry to the platforms list:
 
-```yaml
+~~~yaml
 ---
 driver:
   name: vagrant
@@ -24,21 +30,21 @@ suites:
     run_list:
       - recipe[git::default]
     attributes:
-```
+~~~
 
 And run `kitchen list` to confirm the introduction of our latest instance:
 
-```
+~~~
 $ kitchen list
 Instance             Driver   Provisioner  Last Action
 default-ubuntu-1204  Vagrant  ChefSolo     <Not Created>
 default-ubuntu-1004  Vagrant  ChefSolo     <Not Created>
 default-centos-64    Vagrant  ChefSolo     <Not Created>
-```
+~~~
 
 Now we'll run the **test** subcommand and go grab a coffee:
 
-```
+~~~
 $ kitchen test 10
 -----> Starting Kitchen (v1.0.0)
 -----> Cleaning up any prior instances of <default-ubuntu-1004>
@@ -143,11 +149,11 @@ $ kitchen test 10
 >>>>>> Class: Kitchen::ActionFailed
 >>>>>> Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
 >>>>>> ----------------------
-```
+~~~
 
 Oh noes! Argh, why!? Let's login to the instance and see if we can figure out what the correct package is:
 
-```
+~~~
 $ kitchen login 10
 Linux default-ubuntu-1004 2.6.32-38-server #83-Ubuntu SMP Wed Jan 4 11:26:59 UTC 2012 x86_64 GNU/Linux
 Ubuntu 10.04.4 LTS
@@ -180,11 +186,11 @@ gitweb - fast, scalable, distributed revision control system (web interface)
 vagrant@default-ubuntu-1004:~$ exit
 logout
 Connection to 127.0.0.1 closed.
-```
+~~~
 
 Okay, it looks like we want to install the `git-core` package for this release of Ubuntu. Let's fix this up back in the default recipe. Open up `recipes/default.rb` and edit to something like:
 
-```ruby
+~~~ruby
 if node['platform'] == "ubuntu" && node['platform_version'].to_f <= 10.04
   package "git-core"
 else
@@ -192,11 +198,11 @@ else
 end
 
 log "Well, that was too easy"
-```
+~~~
 
 This may not be pretty but let's verify that it works first on Ubuntu 10.04:
 
-```
+~~~
 $ kitchen verify 10
 -----> Starting Kitchen (v1.0.0)
 -----> Converging <default-ubuntu-1004>...
@@ -255,11 +261,11 @@ Fetching: busser-0.6.0.gem (100%)
        1 test, 0 failures
        Finished verifying <default-ubuntu-1004> (0m0.89s).
 -----> Kitchen is finished. (0m24.20s)
-```
+~~~
 
 Back to green, good. Let's verify that the other two instances are still good. We'll use a Ruby regular expression to glob the two other instances into one Test Kitchen command:
 
-```
+~~~
 $ kitchen verify '(12|64)'
 -----> Starting Kitchen (v1.0.0)
 -----> Creating <default-ubuntu-1204>...
@@ -433,11 +439,11 @@ Fetching: busser-0.6.0.gem (100%)
 -----> Kitchen is finished. (5m8.42s)
 $ echo $?
 0
-```
+~~~
 
 We've successfully verified all three instances, so let's shut them down.
 
-```
+~~~
 $ kitchen destroy
 -----> Starting Kitchen (v1.0.0)
 -----> Destroying <default-ubuntu-1204>...
@@ -456,13 +462,13 @@ $ kitchen destroy
        Vagrant instance <default-centos-64> destroyed.
        Finished destroying <default-centos-64> (0m2.97s).
 -----> Kitchen is finished. (0m9.60s)
-```
+~~~
 
 And finally commit our code updates:
 
-```
+~~~
 $ git add .kitchen.yml recipes/default.rb
 $ git commit -m "Add support for Ubuntu 10.04."
 [master 0c49ced] Add support for Ubuntu 10.04.
  2 files changed, 6 insertions(+), 1 deletion(-)
-```
+~~~

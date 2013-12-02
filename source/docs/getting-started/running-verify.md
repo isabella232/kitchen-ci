@@ -1,10 +1,16 @@
 ---
 title: Running Kitchen Verify
+prev:
+  text: "Running Kitchen Test"
+  url: "running-test"
+next:
+  text: "Running Kitchen Test"
+  url: "running-test"
 ---
 
 Now to put our test to the test. For this we'll use the **verify** subcommand:
 
-```
+~~~
 $ kitchen verify default-ubuntu-1204
 -----> Starting Kitchen (v1.0.0)
 -----> Setting up <default-ubuntu-1204>...
@@ -34,7 +40,7 @@ Uploading /tmp/busser/suites/bats/git_installed.bats (mode=0644)
 -----> Kitchen is finished. (0m5.45s)
 $ echo $?
 0
-```
+~~~
 
 > **All right!**
 
@@ -46,36 +52,36 @@ A few things of note from the output above:
 
 Let's check the status of our instance again:
 
-```
+~~~
 $ kitchen list
 Instance             Driver   Provisioner  Last Action
 default-ubuntu-1204  Vagrant  ChefSolo     Verified
-```
+~~~
 
 Quick, commit!
 
-```
+~~~
 $ git add test/integration/default/bats/git_installed.bats
 $ git commit -m "Add bats test for default suite."
 [master 69586ef] Add bats test for default suite.
  1 file changed, 6 insertions(+)
  create mode 100644 test/integration/default/bats/git_installed.bats
-```
+~~~
 
 So what would a failing test look like? Let's see. Open `test/integration/default/bats/git_installed.bats` in your editor of choice and edit the test so that we're looking for the `gittt` command:
 
-```sh
+~~~sh
 #!/usr/bin/env bats
 
 @test "gittt binary is found in PATH" {
   run which gittt
   [ "$status" -eq 0 ]
 }
-```
+~~~
 
 And re-run the **verify** subcommand:
 
-```
+~~~
 $ kitchen verify default-ubuntu-1204
 -----> Starting Kitchen (v1.0.0)
 -----> Verifying <default-ubuntu-1204>...
@@ -95,13 +101,13 @@ Command [/tmp/busser/vendor/bats/bin/bats /tmp/busser/suites/bats] exit code was
 >>>>>> ----------------------
 $ echo $?
 10
-```
+~~~
 
 Not quite as pretty and happy looking. Thanks to our well-crafted test case name our bats test is telling us what is up: `✗ gittt binary is found in PATH`. Yep, not a surprise. Also note that the exit code is no longer **0** but is **10**.
 
 A quick revert back to our clean code gets us back to green:
 
-```
+~~~
 $ git checkout test/integration/default/bats/git_installed.bats
 $ kitchen verify default-ubuntu-1204
 -----> Starting Kitchen (v1.0.0)
@@ -114,6 +120,6 @@ Uploading /tmp/busser/suites/bats/git_installed.bats (mode=0644)
 1 test, 0 failures
        Finished verifying <default-ubuntu-1204> (0m0.89s).
 -----> Kitchen is finished. (0m1.19s)
-```
+~~~
 
 It's worth pointing out that Test Kitchen is freshly uploading all your tests files for **every** invocation of the **Verify Action**. Another example of Test Kitchen optimizing for **freshness of code and configuration over speed**.

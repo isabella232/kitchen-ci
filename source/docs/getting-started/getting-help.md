@@ -1,5 +1,8 @@
 ---
 title: "Getting Help"
+prev:
+  text: "Installing Test Kitchen"
+  url: "installing"
 next:
   text: "Creating a Cookbook"
   url: "creating-cookbook"
@@ -7,7 +10,7 @@ next:
 
 If you need a quick reminder of what the `kitchen` command gives you, then use the **help** subcommand:
 
-```
+~~~
 $ kitchen help
 Commands:
   kitchen console                          # Kitchen Console!
@@ -27,11 +30,11 @@ Commands:
   kitchen test [all|<REGEX>)] [opts]       # Test one or more instances
   kitchen verify [(all|<REGEX>)] [opts]    # Verify one or more instances
   kitchen version                          # Print Kitchen's version information
-```
+~~~
 
 For more detailed help on a given subcommand, add it to end of the **help** subcommand. For example, in the next section we will be using the **init** subcommand. To get a sneak peek of what this subcommand does, try:
 
-```
+~~~
 $ kitchen help init
 Usage:
   kitchen init
@@ -46,4 +49,4 @@ Options:
 Description:
   Init will add Test Kitchen support to an existing project for convergence integration testing. A default .kitchen.yml file (which is intended to be customized) is created in the
   project's root directory and one or more gems will be added to the project's Gemfile.
-```
+~~~

@@ -1,5 +1,8 @@
 ---
 title: "Running Kitchen Converge"
+prev:
+  text: "Writing a Recipe"
+  url: "writing-recipe"
 next:
   text: "Manually verifying"
   url: "manually-verifying"
@@ -7,7 +10,7 @@ next:
 
 Now that we have some code, let's let Test Kitchen run it for us on our Ubuntu 12.04 instance:
 
-``` 
+~~~
 $ kitchen converge default-ubuntu-1204
 -----> Starting Kitchen (v1.0.0)
 -----> Converging <default-ubuntu-1204>...
@@ -53,7 +56,7 @@ Recipe: git::default
 Chef Client finished, 2 resources updated
        Finished converging <default-ubuntu-1204> (1m3.91s).
 -----> Kitchen is finished. (1m4.22s)
-```
+~~~
 
 To quote our Chef run, that **was** too easy. If you are a Chef user then part of the output above should look familiar to you. Here's what happened at a high level:
 
@@ -63,7 +66,7 @@ To quote our Chef run, that **was** too easy. If you are a Chef user then part o
 
 There's nothing to stop you from running this command again (or over-and-over for that matter) so, let's see what happens:
 
-```
+~~~
 $ kitchen converge default-ubuntu-1204
 -----> Starting Kitchen (v1.0.0)
 -----> Converging <default-ubuntu-1204>...
@@ -96,7 +99,7 @@ Recipe: git::default
 Chef Client finished, 1 resources updated
        Finished converging <default-ubuntu-1204> (0m1.67s).
 -----> Kitchen is finished. (0m1.99s)
-```
+~~~
 
 That ran a **lot** faster didn't it? Here's what happened this time:
 
@@ -104,30 +107,26 @@ That ran a **lot** faster didn't it? Here's what happened this time:
 * The same Chef cookbook files and Chef Solo configuration was uploaded to the instance. Test Kitchen is optimizing for **freshness of code and configuration over speed**. Although we all like speed wherever possible.
 * A Chef run is initiated and runs very quickly as we are in the desired state.
 
-<div class="well">
-  <h4><span class="glyphicon glyphicon-pushpin"></span> Pro-Tip</h4>
-  <p>A lot of time and effort has gone into ensuring that the exit code of Test Kitchen is always appropriate. Here is the Kitchen Command Guarentee:</p>
-  <ol>
-    <li>I will always exit with code <strong>0</strong> if my operation was successful.</li>
-    <li>I will always exit with a non-zero code if <strong>any</strong> part of my operation was not successful.</li>
-    <li>Any behavior to the contrary <strong>is a bug</strong>.</li>
-  </ol>
-  <p>This exit code behavior is a funamental prerequisite for any tool working in a Continuous Integration (CI) environment.</p>
-</div>
+|| Pro-Tip
+|| A lot of time and effort has gone into ensuring that the exit code of Test Kitchen is always appropriate. Here is the Kitchen Command Guarentee:
+|| 1. I will always exit with code **0** if my operation was successful.
+|| 2. I will always exit with a non-zero code if **any** part of my operation was not successful.
+|| 3. Any behavior to the contrary **is a bug**.
+|| This exit code behavior is a funamental prerequisite for any tool working in a Continuous Integration (CI) environment.
 
 Let's check the status of our instance:
 
-```
+~~~
 $ kitchen list
 Instance             Driver   Provisioner  Last Action
 default-ubuntu-1204  Vagrant  ChefSolo     Converged
-```
+~~~
 
 A clean converge run, success! Let's commit our production code and move on:
 
-```
+~~~
 $ git add recipes/default.rb
 $ git commit -m "Implemented the default recipe, woot woot."
 [master 4d54a16] Implemented the default recipe, woot woot.
  1 file changed, 3 insertions(+)
-```
+~~~
