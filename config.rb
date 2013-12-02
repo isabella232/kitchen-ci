@@ -80,7 +80,10 @@ helpers do
       [ "adding-feature", "Adding a New Feature" ],
       [ "adding-suite", "Adding a Suite" ],
       [ "writing-server-test", "Writing a Server Test" ],
+      [ "writing-failing-recipe", "Writing a Failing Recipe" ],
       [ "adding-dependency", "Adding a Dependency" ],
+      [ "backfilling-platforms", "Backfilling Platforms" ],
+      [ "next-steps", "Next Steps" ],
     ]
   end
 
