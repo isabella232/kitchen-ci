@@ -2,8 +2,22 @@
     CSS modifications for the /getting-started page(s) 
 */
 
+.callout {
+  @extend .alert;
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  border-radius: 0px;
+  border-left: 5px solid #468847;
+}
+
+.callout a {
+  color: inherit;
+}
+
 #githubs {
   display: block;
+  margin-bottom: 10px;
   h2 {
     display: inline;
   };
@@ -29,6 +43,9 @@
   }
 }
 
+.guide {
+}
+
 #suggestions {
   margin-bottom: 50px;
   .btn {
@@ -41,14 +58,28 @@
 }
 
 table {
+  @extend .protip;
   @extend .well;
   @extend .table;
-  @extend .protip;
   tr:nth-child(1) {
     background-color: #e4e4e4;
     td:nth-child(1):after {
       visibility: visible;
-      content: "{icon}";
+      content: ">";
     };
   };
+}
+
+.table > tbody > tr > td {
+  border-top: 0px;
+};
+
+.bookmark {
+  i {
+    display: inline;
+  }
+  p {
+    font-family: inherit;
+    display: inline;
+  }
 }

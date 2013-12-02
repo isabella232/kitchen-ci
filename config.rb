@@ -27,7 +27,7 @@ require "slim"
 # end
 
 with_layout :guide do
-  page "/getting-started/*"
+  page "/docs/getting-started/*"
 end
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
