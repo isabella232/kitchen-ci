@@ -29,11 +29,11 @@ title: Welcome to Test Kitchen
       %div.col-md-4
         %h2= data.home.overview[0].heading
         - data.home.overview[0].content.each do |p|
-          %p= p
+          = markdown(p)
       %div.col-md-4
         %h2= data.home.overview[1].heading
         - data.home.overview[1].content.each do |p|
-          %p= p
+          = markdown(p)
       %div.col-md-2
 
 %div.container
@@ -42,14 +42,10 @@ title: Welcome to Test Kitchen
     %div.col-md-8
       %h2= data.home.highlight.heading
       - data.home.highlight.content.each do |p|
-        %p= p
+        = markdown(p)
     %div.col-md-2
 
 %div#footerwrap
   %div.container
     %em= data.home.footer.heading
     %p= data.home.footer.copyright
-
-
-
-
