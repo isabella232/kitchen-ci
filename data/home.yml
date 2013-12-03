@@ -1,0 +1,40 @@
+---
+metadata:
+  subtitle: "Home"
+
+banner:
+  title: "KitchenCI, for all your test automation needs."
+  button:
+    text: "Get Started >"
+    url: "/docs/getting-started/"
+
+partners:
+  -
+    name: "Opscode"
+    src: "/img/partners/opscode.png"
+  -
+    name: "Heavy Water"
+    src: "/img/partners/opscode.png"
+  -
+    name: "DNSimple"
+    src: "/img/partners/dnsimple.png"
+
+overview:
+  -
+    heading: "What it KitchenCI?"
+    content: 
+      - "Craft beer selvage Wes Anderson PBR. Food truck post-ironic paleo flannel. 90's pork belly Etsy, Terry Richardson PBR&B lo-fi wolf selvage Banksy bespoke locavore messenger bag letterpress synth. Cardigan mixtape master cleanse synth. Pitchfork Echo Park biodiesel leggings hashtag trust fund. Butcher seitan keffiyeh, trust fund PBR pop-up cardigan pug dreamcatcher polaroid. Chillwave fanny pack typewriter, biodiesel pug Odd Future craft beer before they sold out plaid irony asymmetrical."
+      - "Wolf typewriter tousled Vice XOXO hashtag. Austin art party synth meggings seitan. Art party ugh Austin, Portland actually keffiyeh next level disrupt hashtag. Umami pork belly American Apparel Helvetica, Pitchfork Intelligentsia keytar. Fanny pack brunch Etsy aesthetic fingerstache umami. Butcher flexitarian keytar four loko, kogi DIY kitsch before they sold out +1 trust fund church-key typewriter scenester. Gastropub ennui pickled direct trade meh Marfa."
+  -
+    heading: "What can I do with it?"
+    content:
+      - "PBR you probably haven't heard of them PBR&B, +1 church-key lomo scenester chia cornhole selvage try-hard. Swag shabby chic Blue Bottle synth banjo food truck sartorial. Carles cray brunch, roof party master cleanse cardigan literally sriracha. YOLO roof party Blue Bottle, ethical food truck banh mi scenester drinking vinegar tattooed tote bag cray authentic. Hoodie leggings beard, Intelligentsia jean shorts narwhal meggings stumptown street art. Flexitarian cred blog, seitan Thundercats tousled farm-to-table disrupt kogi pop-up cardigan Tonx kitsch you probably haven't heard of them Banksy. Salvia readymade chia bespoke trust fund, chillwave mustache paleo kale chips lomo selfies Echo Park skateboard."
+
+underview:
+  heading: "What else can we say about KitchenCI?"
+  content:
+    - "American Apparel sustainable keffiyeh, actually +1 photo booth skateboard hoodie bespoke kale chips wolf church-key. Artisan direct trade mustache cred tousled. Blue Bottle tattooed blog skateboard Thundercats pour-over, deep v flannel Vice. Echo Park XOXO disrupt, gluten-free Tonx 90's hella lo-fi. Wolf before they sold out Blue Bottle, PBR&B cornhole literally butcher McSweeney's put a bird on it meggings pork belly. Church-key letterpress Godard, Williamsburg freegan drinking vinegar Truffaut stumptown. Seitan mumblecore cray cardigan."
+
+footer:
+  heading: "Made in North America"
+  copyright: "&copy; 2013, <a href='http://heavywaterops.com'>Heavy Water Operations, LLC (OR)</a>."

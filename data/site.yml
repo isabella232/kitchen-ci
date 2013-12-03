@@ -1,10 +1,10 @@
 ---
 metadata:
-  title: "Test Kitchen"
+  title: "KitchenCI"
 
 nav:
   header: 
-    name: "Test Kitchen"
+    name: "KitchenCI"
     url: "/"
   sections:
     - 
@@ -14,4 +14,14 @@ nav:
     - 
       name: "Guide"
       url: "/docs/getting-started/"
+
+contact:
+  -
+    name: "Twitter"
+    url: "http://twitter.com/kitchenci"
+    icon: "fa fa-twitter"
+  -
+    name: "GitHub"
+    url: "http://github.com/test-kitchen"
+    icon: "fa fa-github"
 ---
