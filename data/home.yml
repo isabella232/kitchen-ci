@@ -8,6 +8,10 @@ banner:
     text: "Get Started >"
     url: "/docs/getting-started/"
 
+learn:
+  text: "Learn More >"
+  url: "/docs/getting-started/"
+
 partners:
   -
     name: "Heavy Water"
@@ -21,22 +25,24 @@ partners:
 highlight:
   heading: "What is Test Kitchen?"
   content:
-    - Test Kitchen is a test harness tool to execute your configured code on one or more platforms in isolation. A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization technologies such as [Amazon EC2](https://rubygems.org/gems/kitchen-ec2), [Blue Box](https://rubygems.org/gems/kitchen-bluebox), [CloudStack](https://rubygems.org/gems/kitchen-cloudstack), [Digital Ocean](https://rubygems.org/gems/kitchen-digitalocean), [Rackspace](https://rubygems.org/gems/kitchen-rackspace), [OpenStack](https://rubygems.org/gems/kitchen-openstack), [Vagrant](https://rubygems.org/gems/kitchen-vagrant), [Docker](https://rubygems.org/gems/kitchen-docker), [LXC containers](https://rubygems.org/gems/kitchen-lxc), and more. Many testing frameworks are already supported out of the box including [Bats](https://github.com/sstephenson/bats), [shUnit2](https://code.google.com/p/shunit2/), [RSpec](https://www.relishapp.com/rspec), [Serverspec](http://serverspec.org/), with others being created weekly.
-    - For Chef workflows, cookbook dependency resolver tools such as [Berkshelf](http://berkshelf.com/) and [Librarian-Chef](https://github.com/applicationsonline/librarian-chef) are supported or you can simply have a `cookbooks/` directory and Test Kitchen will know what to do. Support for Test Kitchen is already included in many Chef community cookbooks such as the [MySQL](https://github.com/opscode-cookbooks/mysql), [nginx](https://github.com/opscode-cookbooks/nginx), [Chef Server](https://github.com/opscode-cookbooks/chef-server), and [runit](https://github.com/hw-cookbooks/runit) cookbooks.
+    - "Test Kitchen is a test harness tool to execute your configured code on one or more platforms in isolation. A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization technologies such as [Amazon EC2](https://rubygems.org/gems/kitchen-ec2), [Blue Box](https://rubygems.org/gems/kitchen-bluebox), [CloudStack](https://rubygems.org/gems/kitchen-cloudstack), [Digital Ocean](https://rubygems.org/gems/kitchen-digitalocean), [Rackspace](https://rubygems.org/gems/kitchen-rackspace), [OpenStack](https://rubygems.org/gems/kitchen-openstack), [Vagrant](https://rubygems.org/gems/kitchen-vagrant), [Docker](https://rubygems.org/gems/kitchen-docker), [LXC containers](https://rubygems.org/gems/kitchen-lxc), and more. Many testing frameworks are already supported out of the box including [Bats](https://github.com/sstephenson/bats), [shUnit2](https://code.google.com/p/shunit2/), [RSpec](https://www.relishapp.com/rspec), [Serverspec](http://serverspec.org/), with others being created weekly."
+    - "For Chef workflows, cookbook dependency resolver tools such as [Berkshelf](http://berkshelf.com/) and [Librarian-Chef](https://github.com/applicationsonline/librarian-chef) are supported or you can simply have a `cookbooks/` directory and Test Kitchen will know what to do. Support for Test Kitchen is already included in many Chef community cookbooks such as the [MySQL](https://github.com/opscode-cookbooks/mysql), [nginx](https://github.com/opscode-cookbooks/nginx), [Chef Server](https://github.com/opscode-cookbooks/chef-server), and [runit](https://github.com/hw-cookbooks/runit) cookbooks."
 
 overview:
   -
-    heading: "What will it give me?"
+    heading: "What does it give me?"
     content:
-      - Test Kitchen has a simple workflow that stresses speed but optimizes for the freshness of your code executing on the remote systems between tests. It has a static, declarative configuration in a .kitchen.yml file at the root of your project. It is designed to execute isolated code run in pristine environments ensuring that no prior state exists. A plugin architecture gives you the freedom to run your code on any cloud, virtualization, or bare metal resources and allows you to write acceptance criteria in whatever framework you desire.
+      - "Test Kitchen has a simple workflow that stresses speed but optimizes for the freshness of your code executing on the remote systems between tests. It has a static, declarative configuration in a .kitchen.yml file at the root of your project. It is designed to execute isolated code run in pristine environments ensuring that no prior state exists. A plugin architecture gives you the freedom to run your code on any cloud, virtualization, or bare metal resources and allows you to write acceptance criteria in whatever framework you desire."
   -
     heading: "How do I get started?"
     content:
-    - "American Apparel sustainable keffiyeh, actually +1 photo booth skateboard hoodie bespoke kale chips wolf church-key. Artisan direct trade mustache cred tousled. Blue Bottle tattooed blog skateboard Thundercats pour-over, deep v flannel Vice. Echo Park XOXO disrupt, gluten-free Tonx 90's hella lo-fi. Wolf before they sold out Blue Bottle, PBR&B cornhole literally butcher McSweeney's put a bird on it meggings pork belly. Church-key letterpress Godard, Williamsburg freegan drinking vinegar Truffaut stumptown. Seitan mumblecore cray cardigan."
+      - "Adding testing support to your Chef cookbook or project is easy. Assuming you have Ruby 1.9 or higher and Vagrant installed, open a terminal session and type:"
+      - "{{code}}"
+      - "For more comprehensive instructions, check out the Getting Started guide below."
 
 other:
   content:
-  - Test Kitchen is a test harness tool to execute your configured code on one or more platforms in isolation. A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization technologies such as Amazon EC2, Blue Box, CloudStack, Digital Ocean, Rackspace, OpenStack, Vagrant, Docker, LXC containers, and more. On the testing front, many test frameworks are already supported out of the box including Bats, shUnit2, RSpec, Serverspec, and others created weekly.
+    - Test Kitchen is a test harness tool to execute your configured code on one or more platforms in isolation. A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization technologies such as Amazon EC2, Blue Box, CloudStack, Digital Ocean, Rackspace, OpenStack, Vagrant, Docker, LXC containers, and more. On the testing front, many test frameworks are already supported out of the box including Bats, shUnit2, RSpec, Serverspec, and others created weekly.
     - For Chef workflows, cookbook dependency resolver tools such as Berkshelf and Librarian-Chef are supported or you can simply have a cookbooks directory and Test Kitchen will know how to use it. Support for Test Kitchen is already included in many Chef community cookbooks such as the MySQL, nginx, Chef Server, and runit cookbooks.
 
 footer:

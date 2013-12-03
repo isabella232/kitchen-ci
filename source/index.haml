@@ -7,7 +7,7 @@ title: Welcome to Test Kitchen
   %div.container
     %div.row
       %div.col-md-2
-      %div.col-md-4
+      %div#call-to-action.col-md-4
         %h2= data.home.banner.title
         .maximum-button.green.green-border
           %a{ href: data.home.banner.button.url }= data.home.banner.button.text
@@ -56,7 +56,18 @@ title: Welcome to Test Kitchen
       %div.col-md-4
         %h2= data.home.overview[1].heading
         - data.home.overview[1].content.each do |p|
-          = markdown(p)
+          - if p == "{{code}}"
+            = preserve do
+              - code("sh") do
+                :plain
+                  $ gem install test-kitchen
+                  $ kitchen init
+                  $ kitchen test
+          - else
+            = markdown(p)
+
+        .maximum-button.red.red-border.text-center.learn.pull-right
+          %a{ href: data.home.learn.url }= data.home.learn.text
       %div.col-md-2
 
 %div.container
