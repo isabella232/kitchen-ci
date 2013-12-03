@@ -16,13 +16,11 @@ title: Welcome to Test Kitchen
       %div.col-md-2
 
 %div.container
-  %div.row
-    %div.col-md-2
-    %div.col-md-8
-      %h2= data.home.highlight.heading
-      - data.home.highlight.content.each do |p|
-        %p= p
-    %div.col-md-2
+  .partners
+    - data.home.partners.each do |partner|
+      .logo
+        %a{ href: partner.url }
+          %img{ src: partner.src }
 
 %div#landingwrap-02
   %div.container
@@ -39,10 +37,13 @@ title: Welcome to Test Kitchen
       %div.col-md-2
 
 %div.container
-  .partners
-    - data.home.partners.each do |partner|
-      .logo
-        %img{ src: partner.src }      
+  %div.row
+    %div.col-md-2
+    %div.col-md-8
+      %h2= data.home.highlight.heading
+      - data.home.highlight.content.each do |p|
+        %p= p
+    %div.col-md-2
 
 %div#footerwrap
   %div.container

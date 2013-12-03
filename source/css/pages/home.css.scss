@@ -5,15 +5,22 @@
 .partners {
   text-align: center;
 };
+
 .partners:before {
   content: "";
   display: inline-block;
 };
+
 .partners:after {
   display: inline-block;
 }
+
 .partners .logo {
   display: inline;
+  text-decoration: none;
+  a:hover {
+    text-decoration: none;
+  };
   img {
     margin-top: 20px;
     margin-bottom: 20px;

@@ -12,9 +12,11 @@ partners:
   -
     name: "Heavy Water"
     src: "/img/partner/heavywater.png"
+    url: "http://heavywaterops.com"
   -
     name: "Opscode"
     src: "/img/partner/opscode.png"
+    url: "http://opscode.com"
 
 highlight:
   heading: "KitchenCI, did you make me a sandwich?"
