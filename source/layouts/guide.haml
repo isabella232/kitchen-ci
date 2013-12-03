@@ -1,8 +1,9 @@
-- @nav = sitemap.find_resource_by_path("/docs/getting-started/nav.yml") # TODO: I'd rather find this resource by a relative path -ch
-- @nav_index = @nav.data.guide.index { |i| i.url == File.basename(current_page.url) } * 1.0
-- @progress = (@nav_index / @nav.data.guide.size) * 100
+- @nav = sitemap.find_resource_by_path("docs/getting-started/nav.yml") # TODO: I'd rather find this resource by a relative path -ch
+- @root_path = @nav.data.root_path
+- @nav_index = @nav.data.guide.index { |i| File.expand_path(i.url, @root_path) == current_page.url.sub(%r{/$}, '') }
+- @progress = ((@nav_index || 0).to_f / @nav.data.guide.size) * 100
 - @filename = File.basename(current_page.source_file)
-- @forkthedocs = "http://github.com/heavywater/kitchen-docs/edit/master/source/docs/getting-started/#{@filename}" # TODO: move getting-started content into /source/docs subdirectory and remove static reference to /source/getting-started/
+- @forkthedocs = "http://github.com/test-kitchen/kitchen-docs/edit/master/source/docs/getting-started/#{@filename}" # TODO: move getting-started content into /source/docs subdirectory and remove static reference to /source/getting-started/
 
 - wrap_layout :layout do
 
@@ -29,7 +30,7 @@
           %div.callout
             %p
               %strong= "Previously: "
-              %a{ href: current_page.data.prev.url }= current_page.data.prev.text 
+              %a{ href: @root_path + current_page.data.prev.url }= current_page.data.prev.text 
 
         %span#githubs
           %h2= current_page.data.title
@@ -49,7 +50,7 @@
             %div.col-md-5.pull-right
               - if current_resource.data.next
                 .maximum-button.red.full-width
-                  %a{ href: current_resource.data.next.url }= current_resource.data.next.text
+                  %a{ href: @root_path + current_resource.data.next.url }= current_resource.data.next.text
                   %i.glyphicon.glyphicon-circle-arrow-right
 
 
@@ -59,10 +60,10 @@
           /   %li= guide_nav section.last, section.first
           - @nav.data.guide.each do |section|
             - unless section.hide?
-              - if File.basename(current_page.url) == section.url
+              - if File.expand_path(section.url, @root_path) == current_page.url.sub(%r{/$}, '')
                 %li.bookmark
                   %i.glyphicon.glyphicon-bookmark
                   %p= section.name
               - else
                 %li
-                  %a{ href: section.url }= section.name
+                  %a{ href: @root_path + section.url }= section.name
