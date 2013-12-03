@@ -2,17 +2,52 @@
 title: Welcome to Test Kitchen
 ---
 
-%img.img-responsive{ src: "img/kitchen.jpg" }
-%div.row
-  %div.col-md-6
-    %h1= "Test Kitchen"
-    %h2.text-center= "Test Kitchen"
-    %h3.text-center= "Test Kitchen"
-    %h4.text-center= "Test Kitchen"
-    %h5.text-center= "Test Kitchen"
-    %h6.text-center= "Test Kitchen"
+/ %img.img-responsive{ src: "img/kitchen.jpg" }
+%div#landingwrap-01
+  %div.container
+    %div.row
+      %div.col-md-2
+      %div.col-md-4
+        %h2= data.home.banner.title
+        .maximum-button.green.green-border
+          %a{ href: data.home.banner.button.url }= data.home.banner.button.text
+      %div.col-md-4
+        %img{ src: lorem.image('400x400', :background_color => '#000000', :color => '#ffffff') }
+      %div.col-md-2
 
-  %div.col-md-6
-    %p= "Bacon ipsum <a href='#'>dolor sit</a> amet corned beef kielbasa pork loin, tongue chicken tri-tip pork belly short loin turducken jowl pig. Strip steak bresaola salami jowl pork belly pork loin bacon. Hamburger cow drumstick flank kielbasa, spare ribs ribeye ball tip short ribs prosciutto ham hock boudin. Sausage ribeye pork chop tail bacon jerky."
-    %p= "Pancetta swine pig jerky short ribs beef ham hock turkey flank pork boudin. Pig strip steak turducken shankle ball tip pancetta short ribs, frankfurter turkey ham meatloaf beef ribs leberkas. Bacon ipsum dolor sit amet corned beef kielbasa pork loin, tongue chicken tri-tip pork belly short loin turducken jowl pig. Strip steak bresaola salami jowl pork belly pork loin bacon. Hamburger cow drumstick flank kielbasa, spare ribs ribeye ball tip short ribs prosciutto ham hock boudin. Sausage ribeye pork chop tail bacon jerky."
-    %p= "Hamburger cow drumstick flank kielbasa, spare ribs ribeye ball tip short ribs prosciutto ham hock boudin. Sausage ribeye pork chop tail bacon jerky. Pancetta swine pig jerky short ribs beef ham hock turkey flank pork boudin. Pig strip steak turducken shankle ball tip pancetta short ribs, frankfurter turkey ham meatloaf beef ribs leberkas."
+%div.container#logos
+  %div.row
+    %div.col-md-12
+      %img.img-responsive{ src: "/img/tmp/client-logos.png", alt: "" }
+
+%div#landingwrap-02
+  %div.container
+    %div.row
+      %div.col-md-2
+      %div.col-md-4
+        %h2= data.home.overview[0].heading
+        - data.home.overview[0].content.each do |p|
+          %p= p
+      %div.col-md-4
+        %h2= data.home.overview[1].heading
+        - data.home.overview[1].content.each do |p|
+          %p= p
+      %div.col-md-2
+
+%div.container
+  %div.row
+    %div.col-md-2
+    %div.col-md-8
+      %h2= data.home.underview.heading
+      - data.home.underview.content.each do |p|
+        %p= p
+    %div.col-md-2
+
+%div#footerwrap
+  %div.container
+    %em= data.home.footer.heading
+    %p= data.home.footer.copyright
+
+
+
+
