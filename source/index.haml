@@ -2,7 +2,7 @@
 title: Welcome to Test Kitchen
 ---
 
-/ %img.img-responsive{ src: "img/kitchen.jpg" }
+-# = image_tag("kitchen.jpg", class: "img-responsive")
 %div#landingwrap-01
   %div.container
     %div.row
@@ -11,29 +11,8 @@ title: Welcome to Test Kitchen
         %h2= data.home.banner.title
         .maximum-button.green.green-border
           %a{ href: data.home.banner.button.url }= data.home.banner.button.text
-      %div.col-md-4
-        %img{ src: lorem.image('400x400', :background_color => '#000000', :color => '#ffffff') }
-      %div.col-md-2
-
-%div.container
-  .partners
-    - data.home.partners.each do |partner|
-      .logo
-        %a{ href: partner.url }
-          %img{ src: partner.src }
-
-%div#landingwrap-02
-  %div.container
-    %div.row
-      %div.col-md-2
-      %div.col-md-4
-        %h2= data.home.overview[0].heading
-        - data.home.overview[0].content.each do |p|
-          = markdown(p)
-      %div.col-md-4
-        %h2= data.home.overview[1].heading
-        - data.home.overview[1].content.each do |p|
-          = markdown(p)
+      %div.col-md-4.main-sample
+        = image_tag('kitchenci-logo-800x800.png', width: '400')
       %div.col-md-2
 
 %div.container
@@ -44,6 +23,48 @@ title: Welcome to Test Kitchen
       - data.home.highlight.content.each do |p|
         = markdown(p)
     %div.col-md-2
+
+%div#landingwrap-02
+  %div.container
+    %div.row
+      %div.col-md-2
+      %div.col-md-4
+        %h2= data.home.overview[0].heading
+        - data.home.overview[0].content.each do |p|
+          = markdown(p)
+        -# %h2= data.home.overview[1].heading
+        -# - data.home.overview[1].content.each do |p|
+        -#   = markdown(p)
+      %div.col-md-4.sample-code
+        = preserve do
+          - code("yaml") do
+            :plain
+              ---
+              driver:
+                name: vagrant
+
+              provisioner
+                name: chef_zero
+
+              platforms:
+                - name: ubuntu-13.04
+                - name: centos-6.5
+
+              suites:
+                - name: client
+                  run_list:
+                    - recipe[postgresql::client]
+                - name: server
+                  run_list:
+                    - recipe[postgresql::server]
+      %div.col-md-2
+
+%div.container
+  .partners
+    - data.home.partners.each do |partner|
+      .logo
+        %a{ href: partner.url }
+          %img{ src: partner.src }
 
 %div#footerwrap
   %div.container

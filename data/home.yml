@@ -3,7 +3,7 @@ metadata:
   subtitle: "Home"
 
 banner:
-  title: "KitchenCI, for all your test automation needs."
+  title: "Your infrastructure deserves tests too."
   button:
     text: "Get Started >"
     url: "/docs/getting-started/"
@@ -19,20 +19,25 @@ partners:
     url: "http://opscode.com"
 
 highlight:
-  heading: "KitchenCI, did you make me a sandwich?"
+  heading: "What is Test Kitchen?"
   content:
-    - "American Apparel sustainable keffiyeh, actually +1 photo booth skateboard hoodie bespoke kale chips wolf church-key. Artisan direct trade mustache cred tousled. Blue Bottle tattooed blog skateboard Thundercats pour-over, deep v flannel Vice. Echo Park XOXO disrupt, gluten-free Tonx 90's hella lo-fi. Wolf before they sold out Blue Bottle, PBR&B cornhole literally butcher McSweeney's put a bird on it meggings pork belly. Church-key letterpress Godard, Williamsburg freegan drinking vinegar Truffaut stumptown. Seitan mumblecore cray cardigan."
+    - Test Kitchen is a test harness tool to execute your configured code on one or more platforms in isolation. A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization technologies such as [Amazon EC2](https://rubygems.org/gems/kitchen-ec2), [Blue Box](https://rubygems.org/gems/kitchen-bluebox), [CloudStack](https://rubygems.org/gems/kitchen-cloudstack), [Digital Ocean](https://rubygems.org/gems/kitchen-digitalocean), [Rackspace](https://rubygems.org/gems/kitchen-rackspace), [OpenStack](https://rubygems.org/gems/kitchen-openstack), [Vagrant](https://rubygems.org/gems/kitchen-vagrant), [Docker](https://rubygems.org/gems/kitchen-docker), [LXC containers](https://rubygems.org/gems/kitchen-lxc), and more. Many testing frameworks are already supported out of the box including [Bats](https://github.com/sstephenson/bats), [shUnit2](https://code.google.com/p/shunit2/), [RSpec](https://www.relishapp.com/rspec), [Serverspec](http://serverspec.org/), with others being created weekly.
+    - For Chef workflows, cookbook dependency resolver tools such as [Berkshelf](http://berkshelf.com/) and [Librarian-Chef](https://github.com/applicationsonline/librarian-chef) are supported or you can simply have a `cookbooks/` directory and Test Kitchen will know what to do. Support for Test Kitchen is already included in many Chef community cookbooks such as the [MySQL](https://github.com/opscode-cookbooks/mysql), [nginx](https://github.com/opscode-cookbooks/nginx), [Chef Server](https://github.com/opscode-cookbooks/chef-server), and [runit](https://github.com/hw-cookbooks/runit) cookbooks.
 
 overview:
   -
-    heading: "What it KitchenCI?"
+    heading: "What will it give me?"
     content:
-      - "Craft beer selvage Wes Anderson PBR. Food truck post-ironic paleo flannel. 90's pork belly Etsy, Terry Richardson PBR&B lo-fi wolf selvage Banksy bespoke locavore messenger bag letterpress synth. Cardigan mixtape master cleanse synth. Pitchfork Echo Park biodiesel leggings hashtag trust fund. Butcher seitan keffiyeh, trust fund PBR pop-up cardigan pug dreamcatcher polaroid. Chillwave fanny pack typewriter, biodiesel pug Odd Future craft beer before they sold out plaid irony asymmetrical."
-      - "Wolf typewriter tousled Vice XOXO hashtag. Austin art party synth meggings seitan. Art party ugh Austin, Portland actually keffiyeh next level disrupt hashtag. Umami pork belly American Apparel Helvetica, Pitchfork Intelligentsia keytar. Fanny pack brunch Etsy aesthetic fingerstache umami. Butcher flexitarian keytar four loko, kogi DIY kitsch before they sold out +1 trust fund church-key typewriter scenester. Gastropub ennui pickled direct trade meh Marfa."
+      - Test Kitchen has a simple workflow that stresses speed but optimizes for the freshness of your code executing on the remote systems between tests. It has a static, declarative configuration in a .kitchen.yml file at the root of your project. It is designed to execute isolated code run in pristine environments ensuring that no prior state exists. A plugin architecture gives you the freedom to run your code on any cloud, virtualization, or bare metal resources and allows you to write acceptance criteria in whatever framework you desire.
   -
-    heading: "What can I do with it?"
+    heading: "How do I get started?"
     content:
-      - "PBR you probably haven't heard of them PBR&B, +1 church-key lomo scenester chia cornhole selvage try-hard. Swag shabby chic Blue Bottle synth banjo food truck sartorial. Carles cray brunch, roof party master cleanse cardigan literally sriracha. YOLO roof party Blue Bottle, ethical food truck banh mi scenester drinking vinegar tattooed tote bag cray authentic. Hoodie leggings beard, Intelligentsia jean shorts narwhal meggings stumptown street art. Flexitarian cred blog, seitan Thundercats tousled farm-to-table disrupt kogi pop-up cardigan Tonx kitsch you probably haven't heard of them Banksy. Salvia readymade chia bespoke trust fund, chillwave mustache paleo kale chips lomo selfies Echo Park skateboard."
+    - "American Apparel sustainable keffiyeh, actually +1 photo booth skateboard hoodie bespoke kale chips wolf church-key. Artisan direct trade mustache cred tousled. Blue Bottle tattooed blog skateboard Thundercats pour-over, deep v flannel Vice. Echo Park XOXO disrupt, gluten-free Tonx 90's hella lo-fi. Wolf before they sold out Blue Bottle, PBR&B cornhole literally butcher McSweeney's put a bird on it meggings pork belly. Church-key letterpress Godard, Williamsburg freegan drinking vinegar Truffaut stumptown. Seitan mumblecore cray cardigan."
+
+other:
+  content:
+  - Test Kitchen is a test harness tool to execute your configured code on one or more platforms in isolation. A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization technologies such as Amazon EC2, Blue Box, CloudStack, Digital Ocean, Rackspace, OpenStack, Vagrant, Docker, LXC containers, and more. On the testing front, many test frameworks are already supported out of the box including Bats, shUnit2, RSpec, Serverspec, and others created weekly.
+    - For Chef workflows, cookbook dependency resolver tools such as Berkshelf and Librarian-Chef are supported or you can simply have a cookbooks directory and Test Kitchen will know how to use it. Support for Test Kitchen is already included in many Chef community cookbooks such as the MySQL, nginx, Chef Server, and runit cookbooks.
 
 footer:
   heading: "Made in North America"
