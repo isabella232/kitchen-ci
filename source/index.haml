@@ -15,10 +15,14 @@ title: Welcome to Test Kitchen
         %img{ src: lorem.image('400x400', :background_color => '#000000', :color => '#ffffff') }
       %div.col-md-2
 
-%div.container#logos
+%div.container
   %div.row
-    %div.col-md-12
-      %img.img-responsive{ src: "/img/tmp/client-logos.png", alt: "" }
+    %div.col-md-2
+    %div.col-md-8
+      %h2= data.home.highlight.heading
+      - data.home.highlight.content.each do |p|
+        %p= p
+    %div.col-md-2
 
 %div#landingwrap-02
   %div.container
@@ -34,14 +38,10 @@ title: Welcome to Test Kitchen
           %p= p
       %div.col-md-2
 
-%div.container
+%div.container#logos
   %div.row
-    %div.col-md-2
-    %div.col-md-8
-      %h2= data.home.underview.heading
-      - data.home.underview.content.each do |p|
-        %p= p
-    %div.col-md-2
+    %div.col-md-12
+      %img.img-responsive{ src: "/img/tmp/client-logos.png", alt: "" }
 
 %div#footerwrap
   %div.container

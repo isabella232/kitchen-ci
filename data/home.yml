@@ -19,6 +19,11 @@ partners:
     name: "DNSimple"
     src: "/img/partners/dnsimple.png"
 
+highlight:
+  heading: "KitchenCI, did you make me a sandwich?"
+  content:
+    - "American Apparel sustainable keffiyeh, actually +1 photo booth skateboard hoodie bespoke kale chips wolf church-key. Artisan direct trade mustache cred tousled. Blue Bottle tattooed blog skateboard Thundercats pour-over, deep v flannel Vice. Echo Park XOXO disrupt, gluten-free Tonx 90's hella lo-fi. Wolf before they sold out Blue Bottle, PBR&B cornhole literally butcher McSweeney's put a bird on it meggings pork belly. Church-key letterpress Godard, Williamsburg freegan drinking vinegar Truffaut stumptown. Seitan mumblecore cray cardigan."
+
 overview:
   -
     heading: "What it KitchenCI?"
@@ -29,11 +34,6 @@ overview:
     heading: "What can I do with it?"
     content:
       - "PBR you probably haven't heard of them PBR&B, +1 church-key lomo scenester chia cornhole selvage try-hard. Swag shabby chic Blue Bottle synth banjo food truck sartorial. Carles cray brunch, roof party master cleanse cardigan literally sriracha. YOLO roof party Blue Bottle, ethical food truck banh mi scenester drinking vinegar tattooed tote bag cray authentic. Hoodie leggings beard, Intelligentsia jean shorts narwhal meggings stumptown street art. Flexitarian cred blog, seitan Thundercats tousled farm-to-table disrupt kogi pop-up cardigan Tonx kitsch you probably haven't heard of them Banksy. Salvia readymade chia bespoke trust fund, chillwave mustache paleo kale chips lomo selfies Echo Park skateboard."
-
-underview:
-  heading: "What else can we say about KitchenCI?"
-  content:
-    - "American Apparel sustainable keffiyeh, actually +1 photo booth skateboard hoodie bespoke kale chips wolf church-key. Artisan direct trade mustache cred tousled. Blue Bottle tattooed blog skateboard Thundercats pour-over, deep v flannel Vice. Echo Park XOXO disrupt, gluten-free Tonx 90's hella lo-fi. Wolf before they sold out Blue Bottle, PBR&B cornhole literally butcher McSweeney's put a bird on it meggings pork belly. Church-key letterpress Godard, Williamsburg freegan drinking vinegar Truffaut stumptown. Seitan mumblecore cray cardigan."
 
 footer:
   heading: "Made in North America"
