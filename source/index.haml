@@ -38,10 +38,11 @@ title: Welcome to Test Kitchen
           %p= p
       %div.col-md-2
 
-%div.container#logos
-  %div.row
-    %div.col-md-12
-      %img.img-responsive{ src: "/img/tmp/client-logos.png", alt: "" }
+%div.container
+  .partners
+    - data.home.partners.each do |partner|
+      .logo
+        %img{ src: partner.src }      
 
 %div#footerwrap
   %div.container

@@ -10,14 +10,11 @@ banner:
 
 partners:
   -
-    name: "Opscode"
-    src: "/img/partners/opscode.png"
-  -
     name: "Heavy Water"
-    src: "/img/partners/opscode.png"
+    src: "/img/partner/heavywater.png"
   -
-    name: "DNSimple"
-    src: "/img/partners/dnsimple.png"
+    name: "Opscode"
+    src: "/img/partner/opscode.png"
 
 highlight:
   heading: "KitchenCI, did you make me a sandwich?"
