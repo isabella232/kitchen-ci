@@ -15,7 +15,8 @@ gem "rack-contrib"
 gem "therubyracer"
 gem "thin"
 
+gem "git"
+
 group :development do
-  gem "git"
   gem "pry"
 end
