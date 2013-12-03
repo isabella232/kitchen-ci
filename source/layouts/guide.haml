@@ -16,7 +16,7 @@
 
   .container.guide
     .row
-      .article.col-md-8
+      .article.col-sm-8.col-md-8
         - if current_resource.data.danger
           %div.alert.alert-danger= current_resource.data.danger
 
@@ -44,17 +44,17 @@
 
         %div#suggestions
           %div.row
-            %div.col-md-7.pull-left
+            %div.col-sm-7.col-md-7.pull-left
               %p= data.docs.promotion.sponsorship 
 
-            %div.col-md-5.pull-right
+            %div.col-sm-5.col-md-5.pull-right
               - if current_resource.data.next
                 .maximum-button.red.full-width
                   %a{ href: @root_path + current_resource.data.next.url }= current_resource.data.next.text
                   %i.glyphicon.glyphicon-circle-arrow-right
 
 
-      .col-md-4
+      .col-sm-4.col-md-4
         %ul.sections
           / - guide_sections.each do |section|
           /   %li= guide_nav section.last, section.first
