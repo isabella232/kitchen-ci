@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
+gem "rake"
+
 gem "middleman"
 gem "middleman-minify-html"
 gem "middleman-livereload"
@@ -13,7 +15,8 @@ gem "rack-contrib"
 gem "therubyracer"
 gem "thin"
 
+gem "git"
+
 group :development do
-  gem "git"
   gem "pry"
 end

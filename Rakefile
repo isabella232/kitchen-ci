@@ -51,3 +51,9 @@ task :push do
   git.push
   git.push(git.remote("heroku"))
 end
+
+namespace :assets do
+  task :precompile do
+    sh "middleman build --clean"
+  end
+end
