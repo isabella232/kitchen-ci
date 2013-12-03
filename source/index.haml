@@ -11,30 +11,6 @@ title: Welcome to Test Kitchen
         %h2= data.home.banner.title
         .maximum-button.green.green-border
           %a{ href: data.home.banner.button.url }= data.home.banner.button.text
-      %div.col-md-4.main-sample
-        = image_tag('kitchenci-logo-800x800.png', width: '400')
-      %div.col-md-2
-
-%div.container
-  %div.row
-    %div.col-md-2
-    %div.col-md-8
-      %h2= data.home.highlight.heading
-      - data.home.highlight.content.each do |p|
-        = markdown(p)
-    %div.col-md-2
-
-%div#landingwrap-02
-  %div.container
-    %div.row
-      %div.col-md-2
-      %div.col-md-4
-        %h2= data.home.overview[0].heading
-        - data.home.overview[0].content.each do |p|
-          = markdown(p)
-        -# %h2= data.home.overview[1].heading
-        -# - data.home.overview[1].content.each do |p|
-        -#   = markdown(p)
       %div.col-md-4.sample-code
         = preserve do
           - code("yaml") do
@@ -57,6 +33,30 @@ title: Welcome to Test Kitchen
                 - name: server
                   run_list:
                     - recipe[postgresql::server]
+        -# = image_tag('kitchenci-logo-800x800.png', width: '400')
+      %div.col-md-2
+
+%div.container
+  %div.row
+    %div.col-md-2
+    %div.col-md-8
+      %h2= data.home.highlight.heading
+      - data.home.highlight.content.each do |p|
+        = markdown(p)
+    %div.col-md-2
+
+%div#landingwrap-02
+  %div.container
+    %div.row
+      %div.col-md-2
+      %div.col-md-4
+        %h2= data.home.overview[0].heading
+        - data.home.overview[0].content.each do |p|
+          = markdown(p)
+      %div.col-md-4
+        %h2= data.home.overview[1].heading
+        - data.home.overview[1].content.each do |p|
+          = markdown(p)
       %div.col-md-2
 
 %div.container
