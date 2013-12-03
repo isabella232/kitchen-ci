@@ -1,7 +1,6 @@
 require 'rubygems'
 
 require 'rack'
-require 'middleman/rack'
 require 'rack/contrib/not_found'
 require 'rack/contrib/static_cache'
 require 'rack/contrib/try_static'
