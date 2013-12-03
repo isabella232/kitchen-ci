@@ -54,6 +54,6 @@ end
 
 namespace :assets do
   task :precompile do
-    sh "middleman build --clean"
+    sh "middleman build --clean --verbose"
   end
 end
