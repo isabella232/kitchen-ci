@@ -160,19 +160,19 @@
 #hosting-table .column:hover ul li.header_row,
 #hosting-table .column:hover ul li:first-child {
 	border-left: 1px solid transparent;
-	border-left: none \0/;
+	border-left: none 0;
 	*border-left: none;
 } 
 
 #hosting-table .column:hover:first-child ul {
 	border-left: none;
-	border-left: 1px solid #B6B6B6 \0/;
+	border-left: 1px solid #B6B6B6 0;
 	*border-left: 1px solid #B6B6B6;
 } 
 
 #hosting-table .column:hover ul li {
 	border-left: 1px solid #B6B6B6;
-	border-left: none \0/;
+	border-left: none 0;
 	*border-left: none;
 } 
 
@@ -201,7 +201,7 @@
 	text-decoration:none;
 	display:inline-block;
 	padding:.7em 1.8em 1em 1.8em;
-	padding:.7em 1.8em .6em 1.8em \0/;	 
+	padding:.7em 1.8em .6em 1.8em 0;	 
 	*padding:.7em 1.8em .6em 1.8em;	 
 	font-size:16px;
 	color:#fff;
@@ -238,7 +238,7 @@
 	width:200px;
 	color: #565656;
     text-align: center;
-	filter: alpha(opacity:95);
+	filter: alpha(opacity=95);
 	KHTMLOpacity: 0.95;
 	MozOpacity: 0.95;
 	opacity: 0.95;
