@@ -19,6 +19,10 @@ nav:
       name: "Guide"
       url: "/docs/getting-started/"
 
+    - 
+      name: "Support"
+      url: "/support"
+
 contact:
   -
     name: "Twitter"
