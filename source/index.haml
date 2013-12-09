@@ -7,7 +7,8 @@ title: Welcome to Test Kitchen
   %div.container
     %div.row
       %div.col-md-2
-      %div#call-to-action.col-md-4
+      / %div.col-md-4
+      %div.col-md-4#call-to-action
         %h2= data.home.banner.title
         .maximum-button.green.green-border
           %a{ href: data.home.banner.button.url }= data.home.banner.button.text
@@ -33,7 +34,7 @@ title: Welcome to Test Kitchen
                 - name: server
                   run_list:
                     - recipe[postgresql::server]
-        -# = image_tag('kitchenci-logo-800x800.png', width: '400')
+        / = image_tag('kitchenci-logo-800x800.png', width: '400')
       %div.col-md-2
 
 %div.container

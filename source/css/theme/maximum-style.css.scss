@@ -4,7 +4,7 @@
 
 #contacts {
   a {
-    padding-left: 0px;
+    padding-right: 0px;
     font-size: 24px;
   }
 }
@@ -23,17 +23,14 @@
 
 /* Easier buttons, derived from Maximum > style.css */
 .maximum-button {
-  display: block;
-  position: relative;
-  margin: 0 0 1em 0;
-  max-width: 45%;
+  display: inline-block;
   border: none;
-  padding: 10 10 7 10;
-  min-height: 50px;
+  padding: 10 30 10 30;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .maximum-button i {
-  display: inline-block;
   color: #ffffff;
   float: right;
   font-size: 24px;
@@ -46,7 +43,7 @@
   font-family: 'Open Sans',sans-serif;
   font-weight: 500;  
   text-decoration: none;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 
 .maximum-button:hover {
@@ -70,6 +67,7 @@
 .blue-border {
   border-bottom: 3px solid #3083a7;
 }
+
 
 /* Easier alerts, derived from Maximum > style.css */
 blockquote {
@@ -119,96 +117,6 @@ blockquote {
   text-decoration: underline;
   font-weight: 400;
   }
-
-/* Landing page styles */
-
-#landingwrap-01 {
-  background:#303032;
-  width:100%;
-  color:#fff;
-    margin-top:-60px;
-    text-align:center;
-    padding-top:100px;
-    padding-bottom: 40px;
-}
-
-#landingwrap-01 h2 {
-  font-family:'Open Sans Condensed', sans-serif;
-  color:#fff;
-  font-size:40px;
-  font-weight:300;
-  text-align:left;
-}
-
-#landingwrap-02 {
-  background: #3bc492;
-  width: 100%;
-  color:#fff;
-}
-
-#landingwrap-02 h1 {
-  font-family:'Open Sans Condensed', sans-serif;
-  color:#fff;
-  font-size:45px;
-  font-weight:300;
-  text-align:center;
-}
-
-
-#landingwrap-02 h2 {
-  font-family:'Open Sans Condensed', sans-serif;
-  color:#fff;
-  font-size:30px;
-  font-weight:300;
-  text-align:left;
-}
-
-#landingwrap-02 h3 {
-  font-family:'Open Sans Condensed', sans-serif;
-  color:#fff;
-  font-size:30px;
-  font-weight:300;
-}
-
-
-#landingwrap-02 p {
-  color:#fff;
-  font-size:14px;
-}
-
-#landingwrap-03 {
-  background: url(/css/theme/maximum/img/landing/header.png) no-repeat center top; 
-  margin-top: -60px;
-  padding-top:160px;
-  text-align:center;
-  margin-left:-2px;
-  height:500px;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  background-size:cover;
-}
-
-#landingwrap-03 h2 {
-  color:#fff;
-  font-family:'Open Sans Condensed', sans-serif;
-  font-size:50px;
-  font-weight:300;
-}
-
-#landingwrap-03 p {
-  color:#fff;
-  font-family:'Open Sans Condensed', sans-serif;
-  font-size:24px;
-  font-weight:300;
-}
-
-#landingwrap-04 h1 {
-  font-family:'Open Sans Condensed', sans-serif;
-  font-size:55px;
-  color:#565656;
-  font-weight:300;
-  margin:10px;
-}
 
 #footerwrap {
   background-color:#303133;

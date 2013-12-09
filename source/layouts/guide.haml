@@ -49,9 +49,11 @@
 
             %div.col-sm-5.col-md-5.pull-right
               - if current_resource.data.next
-                .maximum-button.red.full-width
-                  %a{ href: @root_path + current_resource.data.next.url }= current_resource.data.next.text
-                  %i.glyphicon.glyphicon-circle-arrow-right
+                .maximum-button.red.red-border.full-width
+                  %a{ href: @root_path + current_resource.data.next.url }
+                    = current_resource.data.next.text
+                    / %i.glyphicon.glyphicon-circle-arrow-right
+                    %i.fa.fa-arrow-circle-right
 
 
       .col-sm-4.col-md-4
