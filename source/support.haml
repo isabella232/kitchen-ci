@@ -1,0 +1,53 @@
+%div
+  %div.welcomewrap.red
+    %h1= data.support.banner.title
+
+  %div.container{ id: data.support.community.id }
+    %h2= data.support.community.heading
+    - data.support.community.desc.each do |p|
+      %p= p
+    %row
+      - data.support.community.resources.each do |resource|
+        %div.support-resource.col-md-4.col-sm-4.col-xs-12
+          %i{ class: resource.icon_class }
+          %h3= resource.subheading
+          - resource.desc.each do |p| 
+            %p= p
+
+  %hr
+  
+  %div.darkgray
+    %div.container{ id: data.support.commercial.id }
+      %h2= data.support.commercial.heading
+      %div.row 
+        - @services = data.support.commercial.services
+        - @half = (@services.length / 2) - 1
+        - @column1 = @services[0 .. @half]
+        - @column2 = @services[@half + 1 .. -1]
+
+        // column 1
+        %div.col-md-6.col-sm-6
+          - @column1.each do |params|
+            %div.support-service
+              %h3= params.subheading
+              - params.desc.each do |p|
+                %p= p
+
+        // column 2
+        %div.col-md-6.col-sm-6
+          - @column2.each do |params|
+            %div.support-service
+              %h3= params.subheading
+              - params.desc.each do |p|
+                %p= p
+
+  %div
+    %div.container{ id: data.support.commercial.pricing.id }
+      %h2= data.support.commercial.pricing.heading
+      %p= "{pricing options go here}"
+
+  %div.mediumgray
+    %div.container{ id: data.support.faq.id }
+      %h2= data.support.faq.heading
+      %p= "{frequently asked questions go here}"
+
