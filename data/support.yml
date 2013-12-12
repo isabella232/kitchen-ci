@@ -66,7 +66,70 @@ commercial:
   pricing:
     id: "pricing"
     heading: "Pricing"
-    rates: []
+    rates: 
+      - 
+        title: "Hourly Rate"
+        subtitle: "Standard rate"
+        features:
+          - 
+            name: "Rate"
+            value: "$350/hour"
+          - 
+            name: "Support Time"
+            value: "1 Hour"
+          - 
+            name: "Business Hours"
+            value: "Standard"
+          - 
+            name: "Response Window"
+            value: "1-2 Business Days"
+
+        rate: "$350.00"
+        button:
+          text: "Get Started >"
+          url: "https://checkout.kitchen.ci/purchase?product=1_hour"
+      - 
+        title: "Half-Day"
+        subtitle: "Buy four hours, get one free!"
+        features:
+          - 
+            name: "Rate"
+            value: "$1,400/half-day"
+          - 
+            name: "Support Time"
+            value: "4-5 Hours"
+          - 
+            name: "Business Hours"
+            value: "Standard"
+          - 
+            name: "Response Window"
+            value: "1-2 Business Days"
+
+        rate: "$1,400.00"
+        button:
+          text: "Get Started >"
+          url: "https://checkout.kitchen.ci/purchase?product=1_hour"
+      - 
+        title: "Daily Rate"
+        subtitle: "Buy six hours, get up to four more free!"
+        features:
+          - 
+            name: "Rate"
+            value: "$2,100/day"
+          - 
+            name: "Support Time"
+            value: "6-10 Hours"
+          - 
+            name: "Business Hours"
+            value: "Standard"
+          - 
+            name: "Response Window"
+            value: "1-2 Business Days"
+
+        rate: "$2,100.00"
+        button:
+          text: "Get Started >"
+          url: "https://checkout.kitchen.ci/purchase?product=1_hour"
 
 faq:
   id: "faq"

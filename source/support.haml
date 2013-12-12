@@ -1,6 +1,7 @@
 %div
   %div.welcomewrap.red
-    %h1= data.support.banner.title
+    %div.container
+      %h1= data.support.banner.title
 
   %div.container{ id: data.support.community.id }
     %h2= data.support.community.heading
@@ -44,7 +45,18 @@
   %div
     %div.container{ id: data.support.commercial.pricing.id }
       %h2= data.support.commercial.pricing.heading
-      %p= "{pricing options go here}"
+      %div.row
+        - data.support.commercial.pricing.rates.each do |option|
+          %div.col-md-4.col-sm-4.col-xs-12
+            %div.pricebox
+              %h1= option.title
+              %p.subtitle= option.subtitle
+              %ul.list-unstyled
+                - option.features.each do |feature|
+                  %li
+                    %p.name= feature.name 
+                    %p.value= feature.value
+              %h2.footer= option.rate
 
   %div.mediumgray
     %div.container{ id: data.support.faq.id }
