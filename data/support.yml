@@ -103,7 +103,7 @@ commercial:
         rate: 150000
         button:
           text: "Pay $1,500.00"
-          url: "https://checkout.kitchen.ci/purchase?product=1_hour"
+          url: "https://checkout.kitchen.ci/purchase?product=5_hour"
       - 
         title: "10-hours"
         subtitle: "Save $100.00/hour!"
@@ -121,7 +121,7 @@ commercial:
         rate: 200000
         button:
           text: "Pay $2,000.00"
-          url: "https://checkout.kitchen.ci/purchase?product=1_day"
+          url: "https://checkout.kitchen.ci/purchase?product=10_hour"
 
 faq:
   id: "faq"
@@ -140,7 +140,7 @@ faq:
         - "The <a href='http://heavywaterops.com'>Heavy Water Operations</a> normal business hours are <strong>Monday - Friday, 8:00 AM - 6:00 PM (Pacific)</strong>, except for most major North American holidays. <strong>After Hours support is available 24/7/365</strong>, but in our experience the requirements for that level of service will vary so much between organizations that we prefer to custom tailer a support SLA to fit your needs. If you require 24/7/365 support please <a href='mailto:support@kitchen.ci?subject=Enterprise%20KitchenCI%20Support'>contact us directly</a> and we'll look forward to speaking with you."
 
     -
-      id: "Q4"
+      id: "Q3"
       subheading: "Response window?"
       desc:
         - "Response windows represent our commitment to responding to support requests in a timely manner. We will always respond to support requests as quickly as possible (sometimes on the same day, but always in the order in which they are received). However, please note that response times are not the same as <em>resolution times</em>; resolution times will be established as we begin to collect more information about your incident."
