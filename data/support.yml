@@ -19,7 +19,7 @@ community:
       icon_class: "fa fa-comments"
       subheading: "Internet Relay Chat"
       desc:
-        - "The primary source of community support for Test Kitchen can be found on the official Test Kitchen IRC channel, which is hosted on <a href='irc://irc.freenode.net:6697/kitchenci'>IRC</a> at <code>irc.freenode.net #kitchenci</code>."
+        - "The primary source of community support for Test Kitchen can be found on the official Test Kitchen IRC channel, which is hosted on <a href='irc://irc.freenode.net:6697/kitchenci'>IRC</a> at <code>irc.freenode.net #kitchenci</code> (<a href='https://botbot.me/freenode/kitchenci/'>IRC trascripts</a>, hosted by <a href='https://botbot.me/'>BotBot.me</a>)"
 
     -
       icon_class: "fa fa-twitter"
