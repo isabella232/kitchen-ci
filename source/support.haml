@@ -47,7 +47,7 @@
       %h2= data.support.commercial.pricing.heading
       %div.row
         - data.support.commercial.pricing.rates.each do |option|
-          %div.col-md-4.col-sm-4.col-xs-12
+          %div.col-md-4.col-sm-12.col-xs-12
             %div.pricebox
               %h1= option.title
               %p.subtitle= option.subtitle
@@ -56,10 +56,17 @@
                   %li
                     %p.name= feature.name 
                     %p.value= feature.value
-              %h2.footer= option.rate
+              %div.footer
+                %a{ href: option.button.url }
+                  %h2
+                    = option.button.text
+                    %i.fa.fa-arrow-circle-o-right
 
   %div.mediumgray
     %div.container{ id: data.support.faq.id }
       %h2= data.support.faq.heading
-      %p= "{frequently asked questions go here}"
-
+      - data.support.faq.questions.each do |faq|
+        %div.faq{ id: faq.id }
+          %h3= faq.subheading
+          - faq.desc.each do |p|
+            %p= p
