@@ -81,7 +81,7 @@
 
 /* Easier alerts, derived from Maximum > style.css */
 blockquote {
-  @extend .maximum-alert
+  @extend .maximum-alert;
 }
 
 .maximum-alert:before {
@@ -131,8 +131,9 @@ blockquote {
 #footerwrap {
   background-color:#303133;
   width:100%;
-  padding-top:45px;
+  padding-top: 40px;
   text-align:center;
+  padding-bottom: 40px;
 }
 
 #footerwrap p {
