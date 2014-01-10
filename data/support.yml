@@ -61,22 +61,20 @@ commercial:
     -
       subheading: ""
       desc:
-        - "<small><sup>#</sup> If you or your organization would like to make a more significant contribution to KitchenCI OSS development, please <a href='mailto:support@hw-ops.com?subject=KitchenCI%20OSS%20Sponsorship'>contact us directly</a> and we'll be happy to make the necessary arrangements. Alternatively, if you would like to Sponsor KitchenCI OSS with a $500.00 contribution without purchasing incident support, <a href='https://checkout.kitchen.ci/purchase?product=sponsor'>click here</a>."
+        - "<small><sup>#</sup> If you or your organization would like to make a more significant contribution to KitchenCI OSS development, please <a href='mailto:support@hw-ops.com?subject=KitchenCI%20OSS%20Sponsorship'>contact us directly</a> and we'll be happy to make the necessary arrangements. Alternatively, if you would like to Sponsor KitchenCI OSS with a $500.00 contribution without purchasing incident support, <a href='https://checkout.kitchen.ci/purchase?product=sponsor'>click here</a>.</small>"
         - "<small>Commercial support for KitchenCI is provided by <a href='http://heavywaterops.com'>Heavy Water Operations</a>.</small>"
+
   pricing:
     id: "pricing"
     heading: "Pricing"
     rates: 
       - 
-        title: "Hourly Rate"
+        title: "1-Hour"
         subtitle: "Standard rate"
         features:
           - 
             name: "Rate"
-            value: "$350.00"
-          - 
-            name: "Support Time"
-            value: "1 Hour"
+            value: "$350.00/hour"
           - 
             name: "Business Hours"
             value: "Standard"
@@ -84,20 +82,17 @@ commercial:
             name: "Response Window"
             value: "1-2 Business Days"
 
-        rate: "Get Started >"
+        rate: 35000
         button:
-          text: "Get Started >"
+          text: "Pay $350.00"
           url: "https://checkout.kitchen.ci/purchase?product=1_hour"
       - 
-        title: "Half-Day"
-        subtitle: "Buy four hours, get one free!"
+        title: "5-hours"
+        subtitle: "Save $50.00/hour!"
         features:
           - 
             name: "Rate"
-            value: "$1,400.00"
-          - 
-            name: "Support Time"
-            value: "4-5 Hours"
+            value: "$300.00/hour"
           - 
             name: "Business Hours"
             value: "Standard"
@@ -105,20 +100,17 @@ commercial:
             name: "Response Window"
             value: "1-2 Business Days"
 
-        rate: "Get Started >"
+        rate: 150000
         button:
-          text: "Get Started >"
+          text: "Pay $1,500.00"
           url: "https://checkout.kitchen.ci/purchase?product=1_hour"
       - 
-        title: "Daily Rate"
-        subtitle: "Buy six hours, get up to four more free!"
+        title: "10-hours"
+        subtitle: "Save $100.00/hour!"
         features:
           - 
             name: "Rate"
-            value: "$2,100.00"
-          - 
-            name: "Support Time"
-            value: "6-10 Hours"
+            value: "$250.00/hour"
           - 
             name: "Business Hours"
             value: "Standard"
@@ -126,15 +118,32 @@ commercial:
             name: "Response Window"
             value: "1-2 Business Days"
 
-        rate: "Get Started >"
+        rate: 200000
         button:
-          text: "Get Started >"
-          url: "https://checkout.kitchen.ci/purchase?product=1_hour"
+          text: "Pay $2,000.00"
+          url: "https://checkout.kitchen.ci/purchase?product=1_day"
 
 faq:
   id: "faq"
   heading: "FAQ"
-  questions: []
+  questions:
+    -
+      id: "Q1"
+      subheading: "If I purchase more time than I need, can I use it later?"
+      desc:
+        - "Yes! Hourly incident support can be used on an as-needed basis (e.g. if you purchase 5 hours and we only use 3 today, you may use the remaining 2 hours at a later time). However, we do ask that you use the time within 30 days (i.e. technically, they expire after 30 days. But if it's 'day 31' and you need help - <em>and you ask really nicely</em> - we probably won't turn you away)."
+
+    -
+      id: "Q2"
+      subheading: "What are 'normal' business hours?"
+      desc:
+        - "The <a href='http://heavywaterops.com'>Heavy Water Operations</a> normal business hours are <strong>Monday - Friday, 8:00 AM - 6:00 PM (Pacific)</strong>, except for most major North American holidays. <strong>After Hours support is available 24/7/365</strong>, but in our experience the requirements for that level of service will vary so much between organizations that we prefer to custom tailer a support SLA to fit your needs. If you require 24/7/365 support please <a href='mailto:support@kitchen.ci?subject=Enterprise%20KitchenCI%20Support'>contact us directly</a> and we'll look forward to speaking with you."
+
+    -
+      id: "Q4"
+      subheading: "Response window?"
+      desc:
+        - "Response windows represent our commitment to responding to support requests in a timely manner. We will always respond to support requests as quickly as possible (sometimes on the same day, but always in the order in which they are received). However, please note that response times are not the same as <em>resolution times</em>; resolution times will be established as we begin to collect more information about your incident."
 
 
 
