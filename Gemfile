@@ -9,7 +9,7 @@ gem "middleman-minify-html"
 gem "middleman-livereload"
 gem "middleman-syntax", github: "middleman/middleman-syntax"
 
-gem "bootstrap-sass", github: "thomas-mcdonald/bootstrap-sass"
+gem "bootstrap-sass", "~> 3.0.3"
 
 gem "rack-contrib"
 gem "therubyracer"
