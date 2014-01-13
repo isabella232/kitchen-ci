@@ -8,12 +8,13 @@ DOC_DIR  = "source/docs"
 LAST_COMMIT_MSG_FILE = "tmp/last_commit_message"
 
 $stdout.sync = true
+logger = Logger.new(STDOUT)
 
 task :default => [:update_docs]
 task :publish => [:pull, :update_docs, :commit, :push]
 
 task :pull do
-  git = Git.open(Dir.pwd, :log => Logger.new(STDOUT))
+  git = Git.open(Dir.pwd, :log => logger)
   git.pull
 end
 
@@ -43,13 +44,13 @@ task :commit do
   if File.exists?(LAST_COMMIT_MSG_FILE)
     message = File.open(LAST_COMMIT_MSG_FILE, "r").read
   end
-  git = Git.open(Dir.pwd, :log => Logger.new(STDOUT))
+  git = Git.open(Dir.pwd, :log => logger)
   git.add
   git.commit(message)
 end
 
 task :push do
-  git = Git.open(Dir.pwd, :log => Logger.new(STDOUT))
+  git = Git.open(Dir.pwd, :log => logger)
   git.push
   git.push(git.remote("heroku"))
 end
