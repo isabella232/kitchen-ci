@@ -7,7 +7,7 @@ gem "rake"
 gem "middleman"
 gem "middleman-minify-html"
 gem "middleman-livereload"
-gem "middleman-syntax", github: "middleman/middleman-syntax"
+gem "middleman-syntax"
 
 gem "bootstrap-sass", "~> 3.0.3"
 
