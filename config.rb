@@ -28,7 +28,7 @@ set :markdown_engine, :kramdown
 # Methods defined in the helpers block are available in templates
 helpers do
 
-  def markdown(text)
+  def render_markdown(text)
     Kramdown::Document.new(text).to_html
   end
 end
