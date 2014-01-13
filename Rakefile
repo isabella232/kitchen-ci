@@ -7,6 +7,8 @@ DOC_DIR  = "source/docs"
 
 LAST_COMMIT_MSG_FILE = "tmp/last_commit_message"
 
+$stdout.sync = true
+
 task :default => [:update_docs]
 task :publish => [:pull, :update_docs, :commit, :push]
 
