@@ -12,6 +12,10 @@ nav:
       url: "/"
 
     - 
+      name: "Blog"
+      url: "/blog/"
+
+    - 
       name: "Guide"
       url: "/docs/getting-started/"
 

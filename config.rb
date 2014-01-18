@@ -2,6 +2,12 @@
 # Page options, layouts, aliases and proxies
 ###
 
+activate :syntax
+set :markdown_engine, :kramdown
+
+# the only true server time
+Time.zone = "UTC"
+
 with_layout :guide do
   page "/docs/getting-started/*"
 end
@@ -9,6 +15,15 @@ end
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.layout = "blog_post"
+  blog.permalink = "{title}"
+  blog.default_extension = ".md"
+end
+
+page "/blog/feed.xml", layout: false
 
 ###
 # Helpers
@@ -22,13 +37,11 @@ activate :livereload
 
 activate :directory_indexes
 
-activate :syntax
-set :markdown_engine, :kramdown
 
 # Methods defined in the helpers block are available in templates
 helpers do
 
-  def markdown(text)
+  def render_markdown(text)
     Kramdown::Document.new(text).to_html
   end
 end

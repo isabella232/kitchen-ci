@@ -123,7 +123,7 @@ p {
 em {
   font-style: normal;
   font-family: 'Open Sans';
-  color: $color-emphasis;
+  font-style: italic;
   margin: auto;
 }
 
@@ -147,7 +147,7 @@ em {
 
 .welcomewrap {
   width: 100%;
-  height: 280px;
+  max-height: 280px;
   background: #3bc492;
   color: #fff;
   text-align: center;
@@ -155,6 +155,15 @@ em {
 
   h1 {
     text-transform: uppercase;
+    padding-bottom: 130px;
+    margin-bottom: 0;
+  }
+
+  img.img-responsive {
+    overflow: hidden;
+    padding-bottom: 5px;
+    max-height: 270px;
+    margin: auto;
   }
 }
 
@@ -186,5 +195,16 @@ ul.sections {
 
   a {
     margin-left: 1.5em;
+  }
+}
+
+.blog {
+  .posted {
+    font-style: italic;
+  }
+
+  section {
+    border-top: thin solid #ddd;
+    padding-top: 1em;
   }
 }

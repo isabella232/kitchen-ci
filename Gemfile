@@ -5,11 +5,15 @@ ruby "2.1.0"
 gem "rake"
 
 gem "middleman"
+gem "middleman-blog"
 gem "middleman-minify-html"
 gem "middleman-livereload"
 gem "middleman-syntax"
 
 gem "bootstrap-sass", "~> 3.0.3"
+
+# for xml feeds
+gem "builder", "~> 3.0"
 
 gem "rack-contrib"
 gem "therubyracer"

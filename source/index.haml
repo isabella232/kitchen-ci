@@ -42,7 +42,7 @@ title: Welcome to Test Kitchen
     %div.col-md-8
       %h2= data.home.highlight.heading
       - data.home.highlight.content.each do |p|
-        = markdown(p)
+        = render_markdown(p)
     %div.col-md-2
 
 %div#landingwrap-02
@@ -52,7 +52,7 @@ title: Welcome to Test Kitchen
       %div.col-md-4
         %h2= data.home.overview[0].heading
         - data.home.overview[0].content.each do |p|
-          = markdown(p)
+          = render_markdown(p)
       %div.col-md-4
         %h2= data.home.overview[1].heading
         - data.home.overview[1].content.each do |p|
@@ -64,7 +64,7 @@ title: Welcome to Test Kitchen
                   $ kitchen init
                   $ kitchen test
           - else
-            = markdown(p)
+            = render_markdown(p)
 
         .maximum-button.red.red-border.text-center.learn.pull-right
           %a{ href: data.home.learn.url }= data.home.learn.text
