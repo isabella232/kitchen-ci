@@ -1,0 +1,25 @@
+- content_for :head do
+  = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
+
+- wrap_layout :layout do
+  .welcomewrap
+    - if current_page.data.has_key?("banner_image")
+      = image_tag(current_page.data["banner_image"], class: "img-responsive")
+    - else
+      %h1 Test Kitchen Blog
+
+  .container.blog
+    .row
+      %article.col-md-12.col-sm-12
+        %h2= current_page.data.fetch("title", "[No Post Title Set]")
+        %p.posted
+          = "by #{current_page.data.author} on "
+          %time{datatime: DateTime.parse(current_page.data.date).strftime('%Y-%m-%d')}= DateTime.parse(current_page.data.date).strftime('%A, %B %e %Y')
+        %section
+          :preserve
+            #{yield}
+
+  #footerwrap
+    .container
+      %em= data.home.footer.heading
+      %p= data.home.footer.copyright

@@ -1,0 +1,38 @@
+---
+pageable: false
+---
+
+- content_for :head do
+  = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
+
+.welcomewrap
+  - if current_page.data.has_key?("banner_image")
+    = image_tag(current_page.data["banner_image"], class: "img-responsive")
+  - else
+    %h1 Test Kitchen Blog
+
+.container.blog
+  - if paginate && num_pages > 1
+    .row
+      %p Page #{page_number} of #{num_pages}
+      - if prev_page
+        %p= link_to 'Previous page', prev_page
+
+  .row
+    .articles.col-md-12.col-sm-12
+      - page_articles.each_with_index do |article, i|
+        .section
+          %h2
+            = link_to article.title, article
+          %p.posted
+            %time{datatime: article.date.strftime('%Y-%m-%d')}= article.date.strftime('%A, %B %e %Y')
+          = article.summary
+
+      - if paginate
+        - if next_page
+          %p= link_to 'Next page', next_page
+
+#footerwrap
+  .container
+    %em= data.home.footer.heading
+    %p= data.home.footer.copyright

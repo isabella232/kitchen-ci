@@ -19,6 +19,9 @@
     %meta{ name: "author", content: "Fletcher Nichol" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
 
+    - if content_for?(:head)
+      = yield_content :head
+
     = stylesheet_link_tag "kitchen"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans"
