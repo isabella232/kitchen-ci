@@ -19,7 +19,7 @@ community:
       icon_class: "fa fa-comments"
       subheading: "Internet Relay Chat"
       desc:
-        - "The primary source of community support for Test Kitchen can be found on the official Test Kitchen IRC channel, which is hosted on <a href='irc://irc.freenode.net:6697/kitchenci'>IRC</a> at <code>irc.freenode.net #kitchenci</code> (<a href='https://botbot.me/freenode/kitchenci/'>IRC trascripts</a>, hosted by <a href='https://botbot.me/'>BotBot.me</a>)"
+        - "The primary source of community support for Test Kitchen can be found on the official Test Kitchen IRC channel, which is hosted on <a href='irc://irc.freenode.net:6697/kitchenci'>IRC</a> at <code>irc.freenode.net #kitchenci</code> (<a href='https://botbot.me/freenode/kitchenci/'>IRC transcripts</a>, hosted by <a href='https://botbot.me/'>BotBot.me</a>)"
 
     -
       icon_class: "fa fa-twitter"
@@ -55,7 +55,7 @@ commercial:
     -
       subheading: "Sponsorship"
       desc:
-        - "KitchenCI is Open Source Software (OSS). While the KitchenCI community continues to increase in number on a monthly basis, most of the core contributions are still reviewed and managed by the the <a href=http://heavywaterops.com/people#team>Heavy Water Operations team</a>. While we do make an effort to stay actively involved in the community we still can't keep up with all the reqeusts we get. However, once we do our efforts usually result in a new KitchenCI release, which benefits everyone who is interested in KitchenCI. If you would like to sponsor these efforts, please check the box entitled 'Sponsor KitchenCI OSS' at checkout to contribute $500.00 towards OSS development<sup>#</sup>."
+        - "KitchenCI is Open Source Software (OSS). While the KitchenCI community continues to increase in number on a monthly basis, most of the core contributions are still reviewed and managed by the the <a href=http://heavywaterops.com/people#team>Heavy Water Operations team</a>. While we do make an effort to stay actively involved in the community we still can't keep up with all the requests we get. However, once we do our efforts usually result in a new KitchenCI release, which benefits everyone who is interested in KitchenCI. If you would like to sponsor these efforts, please check the box entitled 'Sponsor KitchenCI OSS' at checkout to contribute $500.00 towards OSS development<sup>#</sup>."
         - "We love our sponsors! As evidence of that, sponsors will be promoted on the <a href='http://kitchen.ci'>kitchen.ci</a> website, as well as through our social media outlets (currently <a href='http://twitter.com/kitchenci'>Twitter</a>; more coming soon!). Don't worry though - we won't publish anything without prior approval. If you opt to make a contribution at checkout time we'll contact you to inquire about how and where you would like to have your sponsorship published (if at all)."
 
     -
