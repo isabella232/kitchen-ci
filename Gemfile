@@ -14,6 +14,7 @@ gem "bootstrap-sass", "~> 3.0.3"
 
 # for xml feeds
 gem "builder", "~> 3.0"
+gem "nokogiri"
 
 gem "rack-contrib"
 gem "therubyracer"

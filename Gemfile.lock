@@ -79,7 +79,10 @@ GEM
     middleman-syntax (2.0.0)
       middleman-core (~> 3.2)
       rouge (~> 1.0)
+    mini_portile (0.5.3)
     multi_json (1.8.4)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -140,6 +143,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-minify-html
   middleman-syntax
+  nokogiri
   pry
   rack-contrib
   rake
