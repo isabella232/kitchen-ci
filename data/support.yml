@@ -6,26 +6,26 @@ community:
   id: "community-support"
   heading: "Community Support"
   desc:
-    - "If you're looking for help with Test Kitchen there's no better place to start that by getting involved in our thriving community."
+    - "If you're looking for help with KitchenCI there's no better place to start that by getting involved in our thriving community."
     - ""
   resources:
     -
       icon_class: "fa fa-book"
       subheading: "Documentation"
       desc:
-        - "The official Test Kitchen documentation can be found <a href=http://kitchen.ci/docs>here.</a> The documentation is currently limited to a \"Starter Guide\", but comprehensive reference documentation is in the works."
+        - "The official KitchenCI <a href=http://kitchen.ci/docs>documentation</a> is currently limited to a \"Starter Guide\", but comprehensive reference documentation is in the works."
 
     -
       icon_class: "fa fa-comments"
       subheading: "Internet Relay Chat"
       desc:
-        - "The primary source of community support for Test Kitchen can be found on the official Test Kitchen IRC channel, which is hosted on <a href='irc://irc.freenode.net:6697/kitchenci'>IRC</a> at <code>irc.freenode.net #kitchenci</code> (<a href='https://botbot.me/freenode/kitchenci/'>IRC transcripts</a>, hosted by <a href='https://botbot.me/'>BotBot.me</a>)"
+        - "The primary source for community support can be found on freenode at <a href='irc://irc.freenode.net:6697/kitchenci'>#kitchenci</a> (<a href='https://botbot.me/freenode/kitchenci/'>IRC transcripts</a>, hosted by <a href='https://botbot.me/'>BotBot.me</a>)"
 
     -
       icon_class: "fa fa-twitter"
       subheading: "Twitter"
       desc:
-        - "Follow the the Official <a href='http://twitter.com/kitchenci'>@kitchenci</a> Twitter account to stay up to date on the latest community news, or mention <a href='http://twitter.com/kitchenci'>@kitchenci</a> in your tweets for favorites and RTs. The official Twitter hashtag for Test Kitchen is <a href='https://twitter.com/search?q=%23kitchenci'>#kitchenci</a>."
+        - "Follow the the official <a href='http://twitter.com/kitchenci'>@KitchenCI</a> Twitter account to stay up to date on the latest community news, or mention <a href='http://twitter.com/kitchenci'>@KitchenCI</a> in your tweets for favorites and RTs. The official Twitter hashtag for KitchenCI is <a href='https://twitter.com/search?q=%23kitchenci'>#kitchenci</a>."
 
 commercial:
   id: "commercial-support"
@@ -37,6 +37,11 @@ commercial:
         - "Community support is great when the issue(s) you're facing aren't time-sensitive and/or mission critical. For those situations it's oftentimes more convenient to be able to pay for the assistance you need, and get it right away. The following commercial KitchenCI support services are available to help:"
 
     -
+      subheading: "Training"
+      desc:
+        - ""
+
+    -
       subheading: "Incident Support"
       desc:
         - "Sometimes you just need to talk to an expert, or get some quick help to solve a problem. Contracts? <em>Ain't nobody got time for that!</em>"
@@ -45,23 +50,19 @@ commercial:
     -
       subheading: "Long-Term Support"
       desc:
-        - "Are you using KitchenCI in a production environment where you can't afford any downtime? Would it help satisfy your organizations business requirements to obtain a long-term support contract that provides certain assurances? KitchenCI Long-Term Support may be the answer for you. No matter what scale your organization is operating at, <a href='http://heavywaterops.com'>Heavy Water Operations</a> can offer an SLA to match. Inquire below to learn more."
+        - "Are you using KitchenCI in a production environment where you can't afford any downtime? Would it help satisfy your organization's business requirements to obtain a long-term support contract that provides certain assurances? KitchenCI Long-Term Support may be the answer for you. No matter what scale your organization is operating at, <a href='http://heavywaterops.com'>Heavy Water Operations</a> can offer an SLA to match. Contact us there and we'll be happy to help however we can."
 
     -
       subheading: "Custom Development"
       desc:
-        - "Perhaps you already have KitchenCI setup and running - maybe even in production - and you don't require support at all; but rather, you would like to extend KitchenCI in some unique way, but you don't know how (or you don't have the time). We think that's great! But it's also not the same as support, so we prefer to channel those projects through our traditional professional services at <a href='http://heavywaterops.com'>Heavy Water Operations</a>. Contact us there and we'll be happy to help however we can."
+        - "Perhaps you are already using KitchenCI - maybe even in production - and you don't require support at all; but rather, you would like to extend KitchenCI in some unique way, but don't know how (or you don't have the time). We think that's great! But it's also not the same as support, so we prefer to channel those projects through our traditional professional services at <a href='http://heavywaterops.com'>Heavy Water Operations</a>. Contact us there and we'll be happy to help however we can."
 
     -
       subheading: "Sponsorship"
       desc:
-        - "KitchenCI is Open Source Software (OSS). While the KitchenCI community continues to increase in number on a monthly basis, most of the core contributions are still reviewed and managed by the the <a href=http://heavywaterops.com/people#team>Heavy Water Operations team</a>. While we do make an effort to stay actively involved in the community we still can't keep up with all the requests we get. However, once we do our efforts usually result in a new KitchenCI release, which benefits everyone who is interested in KitchenCI. If you would like to sponsor these efforts, please check the box entitled 'Sponsor KitchenCI OSS' at checkout to contribute $500.00 towards OSS development<sup>#</sup>."
-        - "We love our sponsors! As evidence of that, sponsors will be promoted on the <a href='http://kitchen.ci'>kitchen.ci</a> website, as well as through our social media outlets (currently <a href='http://twitter.com/kitchenci'>Twitter</a>; more coming soon!). Don't worry though - we won't publish anything without prior approval. If you opt to make a contribution at checkout time we'll contact you to inquire about how and where you would like to have your sponsorship published (if at all)."
-
-    -
-      subheading: ""
-      desc:
-        - "<small><sup>#</sup> If you or your organization would like to make a more significant contribution to KitchenCI OSS development, please <a href='mailto:support@hw-ops.com?subject=KitchenCI%20OSS%20Sponsorship'>contact us directly</a> and we'll be happy to make the necessary arrangements. Alternatively, if you would like to Sponsor KitchenCI OSS with a $500.00 contribution without purchasing incident support, <a href='https://checkout.kitchen.ci/purchase?product=sponsor'>click here</a>.</small>"
+        - "KitchenCI is Open Source Software (OSS). While the KitchenCI community continues to increase in number on a monthly basis, most of the core contributions are still reviewed and managed by the the <a href=http://heavywaterops.com/people#team>Heavy Water Operations team</a>. While we do make an effort to stay actively involved in the community we still can't keep up with all the requests we get. However, once we do our efforts usually result in a new KitchenCI release, which benefits everyone who is interested in KitchenCI. If you would like to sponsor these efforts, please consider making a $500.00 <a href='https://checkout.kitchen.ci/purchase?product=sponsor'>contribution</a> towards KitchenCI OSS development."
+        - "We love our sponsors! As evidence of that, sponsors will be promoted on the <a href='http://kitchen.ci'>KitchenCI</a> website, as well as through our social media outlets (currently <a href='http://twitter.com/kitchenci'>Twitter</a>; more coming soon!). Don't worry though - we won't publish anything without prior approval. If you opt to make a contribution at checkout time we'll contact you to inquire about how and where you would like to have your sponsorship published (if at all)."
+        - "If you or your organization would like to make a more significant contribution to KitchenCI OSS development, please <a href='mailto:sponsorship@kitchen.ci?subject=KitchenCI%20OSS%20Sponsorship'>contact us directly</a> and we'll be happy to make the necessary arrangements."
         - "<small>Commercial support for KitchenCI is provided by <a href='http://heavywaterops.com'>Heavy Water Operations</a>.</small>"
 
   pricing:
