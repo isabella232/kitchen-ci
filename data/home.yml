@@ -18,9 +18,9 @@ partners:
     src: "/img/partner/heavywater.png"
     url: "http://heavywaterops.com"
   -
-    name: "Opscode"
-    src: "/img/partner/opscode.png"
-    url: "http://opscode.com"
+    name: "Chef"
+    src: "/img/partner/chef.png"
+    url: "http://www.getchef.com"
 
 highlight:
   heading: "What is Test Kitchen?"
