@@ -4,26 +4,29 @@ prev:
   text: "Running Kitchen Test"
   url: "running-test"
 next:
-  text: "Fixing Converge"
-  url: "fixing-converge"
+  text: "Dynamic Configuration"
+  url: "dynamic-configuration"
 ---
 
 Now that we are masters of the Ubuntu platform, let's add support for CentOS to our cookbook. This shouldn't be too bad. Open `.kitchen.yml` in your editor and the `centos-6.4` line to your platforms list so that it resembles:
 
 ~~~yaml
 ---
-driver_plugin: vagrant
-driver_config:
-  require_chef_omnibus: true
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
 
 platforms:
-- name: ubuntu-12.04
-- name: centos-6.4
+  - name: ubuntu-12.04
+  - name: centos-6.4
 
 suites:
-- name: default
-  run_list: ["recipe[git]"]
-  attributes: {}
+  - name: default
+    run_list:
+      - recipe[git::default]
+    attributes:
 ~~~
 
 Now let's check the status of our instances:
