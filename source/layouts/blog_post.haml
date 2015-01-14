@@ -13,7 +13,7 @@
       %article.col-md-12.col-sm-12
         %h2= current_page.data.fetch("title", "[No Post Title Set]")
         %p.posted
-          = "by #{current_page.data.author} on "
+          = "by #{current_page.data.fetch("author", "[Unknown author]")} on "
           %time{datatime: DateTime.parse(current_page.data.date).strftime('%Y-%m-%d')}= DateTime.parse(current_page.data.date).strftime('%A, %B %e %Y')
         %section
           :preserve
