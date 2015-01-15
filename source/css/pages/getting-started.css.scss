@@ -3,7 +3,7 @@
 */
 
 .callout {
-  @extend .alert;
+  @extend .alert !optional;
   color: #468847;
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -59,7 +59,7 @@
 
 table {
   @extend .protip;
-  @extend .well;
+  @extend .well  !optional;
   @extend .table;
   tr:nth-child(1) {
     background-color: #e4e4e4;
