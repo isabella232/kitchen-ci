@@ -1,6 +1,6 @@
 ---
 title: Test Kitchen 1.4.0 Release Notes
-date: 2015-04-24 01:00 UTC
+date: 2015-04-28 15:00 UTC
 author: Fletcher Nichol
 tags: release-notes
 ---
@@ -10,7 +10,7 @@ For immediate release: [Test Kitchen 1.4.0](https://github.com/test-kitchen/test
 READMORE
 
 
-Sitting down? Good, this could take a few minutes to read through. Today we're releasing version 1.4.0 of Test Kitchen with a little something for everyone. We have an aggresively reworked plugin system including 2 new plugin concepts (Transport and Verifiers), improved SSH resiliency when instances are booting, first steps at SSH compression to make converges quicker, better HTTP proxy support, a fully realized Windows story, and more.
+Sitting down? Good, this could take a few minutes to read through. Today we're releasing version 1.4.0 of Test Kitchen with a little something for everyone. We have an aggressively reworked plugin system including 2 new plugin concepts (Transport and Verifiers), improved SSH resiliency when instances are booting, first steps at SSH compression to make converges quicker, better HTTP proxy support, a fully realized Windows story, and more.
 
 Let's dig in a little, shall we?
 
@@ -113,22 +113,22 @@ Any Vagrant base box should have `vm.communicator = “winrm”` and `vm.guest =
 
 ## Building Windows Vagrant Boxes
 
-Due to Microsoft's EULA restrictions, it isn't currently possible to distribute Windows Vagrant boxes--even if they are evaluation versions from publically downloadible ISO images. This leaves us with the task of building the boxes ourselves, but thankfully [Packer](https://packer.io/) makes this a good deal easier.
+Due to Microsoft's EULA restrictions, it isn't currently possible to distribute Windows Vagrant boxes--even if they are evaluation versions from publicly downloadable ISO images. This leaves us with the task of building the boxes ourselves, but thankfully [Packer](https://packer.io/) makes this a good deal easier.
 
 To test the functionality of Test Kitchen in development, the [boxcutter/windows](https://github.com/boxcutter/windows) was used to create various Windows box versions. You will need [Packer](https://packer.io/downloads.html) installed but should work on most operating systems. For example, here's how you can build your own Windows Server 2012r2 evaluation box using Boxcutter:
 
 ~~~sh
 git clone https://github.com/boxcutter/windows.git
 cd windows
-make vmware/eval-win2012r2-standard
+make virtualbox/eval-win2012r2-standard
 ~~~
 
-Note that on my 13" MacBook Retina the download-to-built time was 44 minutes. Long, but not bad considering.
+Note that on my 13" MacBook Retina the download-to-built time was 44 minutes. Long, but not bad considering. Also, if VMware is your cup of tea, try `make vmware/eval-win2012r2-standard`.
 
 Finally, add the build box to Vagrant, calling it `"windows-2012r2"` (a box starting with "win" will help Test Kitchen do the right thing out of the box):
 
 ~~~sh
-vagrant box add windows-2012r2 ./box/vmware/eval-win2012r2-standard-nocm-1.0.4.box
+vagrant box add windows-2012r2 ./box/virtualbox/eval-win2012r2-standard-nocm-1.0.4.box
 ~~~
 
 Also note that the [joefitzgerald/packer-windows](https://github.com/joefitzgerald/packer-windows) also creates a wide variety of Windows Vagrant boxes and may be more your speed if looking for alternatives.
@@ -690,7 +690,7 @@ Here are the implementation details for these methods (intended only to preserve
 
 There are (hopefully) very few instances where custom code will directly invoke these methods, but they are here just in case.
 
-## Full Changleog
+## Full Changeleog
 
 (*This is a selected roll-up of 1.4.0 pre-release [changelogs](https://github.com/test-kitchen/test-kitchen/blob/master/CHANGELOG.md)*)
 
