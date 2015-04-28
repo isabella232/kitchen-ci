@@ -65,7 +65,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: [%r{^blog}]
 
   # Minify HTML on build
   activate :minify_html
