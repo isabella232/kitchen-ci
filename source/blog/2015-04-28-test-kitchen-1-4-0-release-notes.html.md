@@ -8,12 +8,16 @@ tags: release-notes
 For immediate release: [Test Kitchen 1.4.0](https://github.com/test-kitchen/test-kitchen/releases/tag/v1.4.0) is available on [RubyGems](https://rubygems.org/gems/test-kitchen).
 READMORE
 
+|| Update 2015-05-08
+|| *The installation section has been updated with a link to the ChefDK version that ships Test Kitchen 1.4.0*
 
 Sitting down? Good, this could take a few minutes to read through. Today we're releasing version 1.4.0 of Test Kitchen with a little something for everyone. We have an aggressively reworked plugin system including 2 new plugin concepts (Transport and Verifiers), improved SSH resiliency when instances are booting, first steps at SSH compression to make converges quicker, better HTTP proxy support, a fully realized Windows story, and more.
 
 Let's dig in a little, shall we?
 
 ## Installing
+
+If you use the ChefDK project, then upgrade to [version 0.5.0](https://downloads.chef.io/chef-dk/) or later to get all the goodies!
 
 If you have a Ruby workflow with RubyGems and/or Bundler this won’t be too much work:
 
@@ -32,8 +36,6 @@ gem "test-kitchen", "~> 1.4"
 gem "kitchen-vagrant", "~> 0.17"
 gem "winrm-transport" # only needed if you want to spin up Windows instances
 ~~~
-
-A ChefDK release is in the process of baking, and we'll update this section when it's ready.
 
 ## Windows!
 
